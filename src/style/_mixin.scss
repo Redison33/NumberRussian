@@ -1,5 +1,21 @@
 @import './_vars.scss';
 
+@mixin label {
+    padding: $margin-xxs 8px;
+    border-radius: $border-radius-s;
+    white-space: nowrap;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin button-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 @mixin button-default {
     display: flex;
     height: 56px;
@@ -53,4 +69,70 @@
     @include button-default;
     background-color: #f0f6ff;
     color: $primary-blue;
+}
+
+@mixin card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f6ff;
+    border-radius: $border-radius-l;
+    padding: $margin-s;
+
+    &__title {
+        height: 70px;
+        margin-bottom: 24px;
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        color: $primary-dark;
+    }
+
+    &__labels {
+        margin-bottom: $margin-m;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+
+        &__item {
+            @include label;
+        }
+    }
+
+    &__dates {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: $margin-m;
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #727272;
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        button {
+            @include button-main;
+            width: 100%;
+        }
+    }
 }
