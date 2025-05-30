@@ -11,8 +11,8 @@
     outline: none;
     border: none;
     cursor: pointer;
-
-    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 @mixin button-main {
