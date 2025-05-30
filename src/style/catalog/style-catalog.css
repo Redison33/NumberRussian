@@ -21,4 +21,291 @@
   src: local("Roboto-Bold"), local("Roboto Bold"), url("../../fonts/Roboto-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+button {
+  font-family: "Roboto";
+}
+
+input {
+  font-family: "Roboto";
+}
+
+p,
+h1,
+h2,
+h3,
+span {
+  color: #0d0d12;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1376px;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+.breadcrumbs span:first-child {
+  color: #142bfd;
+}
+
+main .banner {
+  border-radius: 42px;
+  background-image: url("../../img/banner-grid.png");
+  background-color: rgba(20, 43, 253, 0.6);
+  padding: 98px 0px;
+  margin: 0 32px 64px;
+}
+main .banner__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  gap: 12px;
+}
+main .banner__labels {
+  display: flex;
+  gap: 4px;
+}
+main .banner__labels__item {
+  padding: 4px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+}
+main .banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 64px;
+}
+main .banner__text__title {
+  font-size: 72px;
+  font-weight: 700;
+  text-align: center;
+  line-height: normal;
+}
+main .banner__text__description {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+main .banner__button {
+  display: flex;
+  height: 56px;
+  padding: 20px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #142bfd;
+}
+main .banner__button:hover {
+  background-color: #0013c2;
+}
+main .catalog__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+main .catalog__inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+main .catalog__inputs__switch {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+main .catalog__inputs__switch p {
+  font-size: 16px;
+  font-weight: 500;
+}
+main .catalog__inputs__switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  height: 23px;
+}
+main .catalog__inputs__switch .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+main .catalog__inputs__switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+main .catalog__inputs__switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+main .catalog__inputs__switch input:checked + .slider {
+  background-color: #2196f3;
+}
+main .catalog__inputs__switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+main .catalog__inputs__switch input:checked + .slider:before {
+  transform: translateX(16px);
+}
+main .catalog__inputs__switch .slider.round {
+  border-radius: 34px;
+}
+main .catalog__inputs__switch .slider.round:before {
+  border-radius: 50%;
+}
+main .catalog__inputs__search {
+  display: flex;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid #f0f6ff;
+  background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
+  padding: 20px;
+}
+main .catalog__inputs__search button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .catalog__inputs__search input {
+  border: none;
+  outline: none;
+  background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
+}
+main .catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+main .catalog__grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f6ff;
+  border-radius: 24px;
+  padding: 20px;
+}
+main .catalog__grid .card__title {
+  height: 70px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  color: #0d0d12;
+}
+main .catalog__grid .card__labels {
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+main .catalog__grid .card__labels__item {
+  padding: 4px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+}
+main .catalog__grid .card__dates {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 32px;
+}
+main .catalog__grid .card__dates p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #727272;
+}
+main .catalog__grid .card__dates span {
+  font-size: 16px;
+  font-weight: 500;
+}
+main .catalog__grid .card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+main .catalog__grid .card__wrapper p {
+  font-size: 14px;
+  font-weight: 500;
+}
+main .catalog__grid .card__wrapper button {
+  display: flex;
+  height: 56px;
+  padding: 20px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #142bfd;
+  width: 100%;
+}
+main .catalog__grid .card__wrapper button:hover {
+  background-color: #0013c2;
 }/*# sourceMappingURL=style-catalog.css.map */

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/libs/slick.css" />
+        <link rel="stylesheet" href="./src/style/normalize.css" />
+        <link rel="stylesheet" href="./src/style/catalog/style-catalog.css" />
+        <link rel="stylesheet" href="./src/style/index/style-index.css" />
+        <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon" />
+        <title>Каталог мероприятий</title>
+    </head>
+    <body>
+        <div class="breadcrumbs">
+            <span>Главная</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                <path
+                    d="M12.5 5.5L1.5 5.5M1.5 5.5L5.625 9.625M1.5 5.5L5.625 1.375"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
+            <span>Мероприятия</span>
+        </div>
+
+        <main>
+            <section class="banner">
+                <div class="container banner__container">
+                    <ul class="banner__labels">
+                        <li class="banner__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
+                        <li class="banner__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
+                        <li class="banner__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
+                        <li class="banner__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
+                    </ul>
+
+                    <div class="banner__text">
+                        <h1 class="banner__text__title">Марафон проектных идей <br />«IT. Вызов»</h1>
+
+                        <p class="banner__text__description">
+                            С&nbsp;4&nbsp;по&nbsp;18&nbsp;августа на&nbsp;Камчатке состоится Всероссийский экологический молодёжный форум
+                            &laquo;Экосистема. Заповедный край&raquo; платформы Росмолодёжь. Форумы. Ключевой темой форума в&nbsp;2025 году станет
+                            устойчивая энергетика.
+                        </p>
+                    </div>
+
+                    <button class="banner__button button">Зарегистрироваться</button>
+                </div>
+            </section>
+
+            <section class="catalog">
+                <div class="container catalog__container">
+                    <div class="catalog__inputs">
+                        <div class="catalog__inputs__switch">
+                            <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider round"></span>
+                            </label>
+
+                            <p>Доступная регистрация</p>
+                        </div>
+
+                        <div class="catalog__inputs__search">
+                            <button>
+                                <img src="./src/img/search.svg" alt="Поиск" />
+                            </button>
+                            <input type="text" placeholder="Поиск" />
+                        </div>
+                    </div>
+
+                    <div class="catalog__grid">
+                        <article class="catalog__grid__item card">
+                            <h3 class="card__title">Марафон проектных идей</h3>
+
+                            <ul class="card__labels">
+                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
+                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
+                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
+                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
+                            </ul>
+
+                            <div class="card__dates">
+                                <p>Даты проведения</p>
+                                <span>2 - 23 января</span>
+                            </div>
+
+                            <div class="card__wrapper">
+                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
+                                <button class="button card__wrapper__button">Подробнее</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
