@@ -1,6 +1,56 @@
-// @mixin title {
-//     color: #ffffff;
-//     font-family: 'Kharkiv';
-//     margin: 0;
-//     text-transform: uppercase;
-// }
+@import './_vars.scss';
+
+@mixin button-default {
+    display: flex;
+    height: 56px;
+    padding: 20px 42px;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-m;
+    color: $primary-light;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+@mixin button-main {
+    @include button-default;
+    background-color: $primary-blue;
+
+    &:hover {
+        background-color: $primary-blue-hover;
+    }
+}
+
+@mixin button-yellow {
+    @include button-default;
+    background-color: $yellow;
+
+    &:hover {
+        background-color: $yellow-hover;
+    }
+}
+
+@mixin button-green {
+    @include button-default;
+    background-color: $success-color;
+
+    &:hover {
+        background-color: $success-hover-color;
+    }
+}
+
+@mixin button-outlined {
+    @include button-default;
+    background-color: transparent;
+    border: 1px solid $primary-blue;
+    color: $primary-blue;
+}
+
+@mixin button-outlined-v2 {
+    @include button-default;
+    background-color: #f0f6ff;
+    color: $primary-blue;
+}
