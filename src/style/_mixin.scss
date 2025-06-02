@@ -61,7 +61,7 @@
 @mixin button-yellow {
     @include button-default;
     background-color: $yellow;
-
+    color: $primary-dark;
     &:hover {
         background-color: $yellow-hover;
     }
@@ -162,6 +162,31 @@
         a {
             @include button-main;
             width: 100%;
+        }
+    }
+}
+@mixin header-section {
+    position: relative;
+    color: #142bfd;
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    span {
+        color: #0d0d12;
+        position: relative;
+        img {
+            position: absolute;
+            bottom: 0;
+            transform: rotate(-8deg);
+            width: 68px;
+            height: 68px;
+            border-radius: 24px;
         }
     }
 }
