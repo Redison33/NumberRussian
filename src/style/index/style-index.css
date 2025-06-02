@@ -261,7 +261,8 @@
   font-size: 14px;
   font-weight: 500;
 }
-.events__container .events__grid .card__wrapper button {
+.events__container .events__grid .card__wrapper button,
+.events__container .events__grid .card__wrapper a {
   display: flex;
   height: 56px;
   padding: 20px 42px;
@@ -277,7 +278,8 @@
   background-color: #142bfd;
   width: 100%;
 }
-.events__container .events__grid .card__wrapper button:hover {
+.events__container .events__grid .card__wrapper button:hover,
+.events__container .events__grid .card__wrapper a:hover {
   background-color: #0013c2;
 }
 .events__container .events__button {
@@ -296,6 +298,10 @@
   background-color: transparent;
   border: 1px solid #142bfd;
   color: #142bfd;
+}
+.events__container .events__button:hover {
+  background-color: #142bfd;
+  color: #ffffff;
 }
 
 .party__container {
@@ -417,6 +423,10 @@
   color: #142bfd;
   border-radius: 62px;
   gap: 8px;
+}
+.party__container .party__slider .slide__buttons a:first-child:hover {
+  background-color: #142bfd;
+  color: #ffffff;
 }
 .party__container .party__slider .slide__buttons a:last-child {
   display: flex;

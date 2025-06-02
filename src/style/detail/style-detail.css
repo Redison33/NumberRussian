@@ -526,13 +526,23 @@ main .banner-big ul li div span {
   color: #ffffff;
 }
 main .winners {
+  z-index: 100;
+  position: relative;
   margin-bottom: 160px;
 }
+main .winners svg {
+  z-index: 99;
+  position: absolute;
+  bottom: -225px;
+  right: 0px;
+}
 main .winners__container {
+  position: relative;
   padding: 48px 60px;
   flex-direction: column;
   border-radius: 42px;
   background-color: #f1f5ff;
+  z-index: 100;
 }
 main .winners__title {
   font-size: 64px;
@@ -543,7 +553,13 @@ main .winners__title {
 main .winners__title span {
   color: #142bfd;
 }
+main .winners .party__slider {
+  position: relative;
+  padding-bottom: 108px;
+}
 main .winners .party__slider .slide {
+  position: relative;
+  padding-bottom: 108px;
   margin: 0 6px;
   width: 450px;
   height: 692px;
@@ -651,7 +667,323 @@ main .winners .party__slider .slide__buttons a:last-child {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #daff62;
+  color: #0d0d12;
 }
 main .winners .party__slider .slide__buttons a:last-child:hover {
   background-color: #bbe436;
+}
+main .winners .party__slider .slide .slick-arrow {
+  font-size: 0;
+  background-image: url("../../img/slider-arrow.svg");
+  border: none;
+  background-color: transparent;
+  width: 64px;
+  height: 64px;
+}
+main .winners .party__slider .slide .slick-prev {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: calc(50% - 74px);
+}
+main .winners .party__slider .slide .slick-next {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: calc(50% - 74px);
+  transform: rotate(180deg);
+}
+main .projects {
+  z-index: 100;
+  position: relative;
+  margin-bottom: 160px;
+}
+main .projects svg {
+  z-index: 99;
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+main .projects__container {
+  position: relative;
+  padding: 48px 60px;
+  flex-direction: column;
+  border-radius: 42px;
+  background-color: #f1f5ff;
+  z-index: 100;
+}
+main .projects__title {
+  font-size: 64px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 64px;
+}
+main .projects__title span {
+  color: #142bfd;
+}
+main .projects .party__slider {
+  position: relative;
+  padding-bottom: 108px;
+}
+main .projects .party__slider .slide {
+  margin: 0 6px;
+  width: 450px;
+  height: 692px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 32px;
+  background: #ffffff;
+}
+main .projects .party__slider .slide img {
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 12px;
+}
+main .projects .party__slider .slide h3 {
+  color: #0d0d12;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+main .projects .party__slider .slide__prize {
+  margin-bottom: 12px;
+  margin-top: auto;
+  position: relative;
+  background-color: #142bfd;
+  padding: 12px;
+  border-radius: 12px;
+}
+main .projects .party__slider .slide__prize h4 {
+  color: #ffffff;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+main .projects .party__slider .slide__prize p {
+  margin: 0;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0d0d12;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .projects .party__slider .slide__prize p span {
+  color: #bf1a37;
+  font-weight: 500;
+}
+main .projects .party__slider .slide__prize img {
+  position: absolute;
+  width: 151px;
+  transform: rotate(12deg);
+  bottom: 0;
+  right: 8px;
+}
+main .projects .party__slider .slide__buttons {
+  display: flex;
+  gap: 12px;
+}
+main .projects .party__slider .slide__buttons a {
+  text-decoration: none;
+}
+main .projects .party__slider .slide__buttons a:first-child {
+  display: flex;
+  height: 56px;
+  padding: 20px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: transparent;
+  border: 1px solid #142bfd;
+  color: #142bfd;
+  border-radius: 62px;
+  gap: 8px;
+}
+main .projects .party__slider .slide__buttons a:first-child:hover {
+  background-color: #142bfd;
+  color: #ffffff;
+}
+main .projects .party__slider .slide__buttons a:last-child {
+  display: flex;
+  height: 56px;
+  padding: 20px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: #daff62;
+  color: #0d0d12;
+}
+main .projects .party__slider .slide__buttons a:last-child:hover {
+  background-color: #bbe436;
+}
+main .projects .party__slider .slide .slick-arrow {
+  font-size: 0;
+  background-image: url("../../img/slider-arrow.svg");
+  border: none;
+  background-color: transparent;
+  width: 64px;
+  height: 64px;
+}
+main .projects .party__slider .slide .slick-prev {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: calc(50% - 74px);
+}
+main .projects .party__slider .slide .slick-next {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: calc(50% - 74px);
+  transform: rotate(180deg);
+}
+main .slider {
+  margin-bottom: 160px;
+  position: relative;
+  z-index: 100;
+}
+main .slider svg {
+  position: absolute;
+  bottom: -365px;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+main .slider__container {
+  position: relative;
+  z-index: 100;
+}
+main .events {
+  margin-bottom: 64px;
+  padding-bottom: 0;
+}
+main .events__container {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+main .events__title {
+  display: flex;
+  flex-direction: column;
+  max-width: 633px;
+  color: #142bfd;
+  font-size: 64px;
+  font-weight: 600;
+}
+main .events__title div {
+  align-self: end;
+  margin-right: 30px;
+}
+main .events__title div span {
+  color: #0d0d12;
+}
+main .events__title div img {
+  width: 68px;
+  height: 68px;
+  transform: rotate(-7.806deg) translateY(10px);
+}
+main .events__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+main .events__list .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f6ff;
+  border-radius: 24px;
+  padding: 20px;
+}
+main .events__list .card__title {
+  height: 70px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  color: #0d0d12;
+}
+main .events__list .card__labels {
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+main .events__list .card__labels__item {
+  padding: 4px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+}
+main .events__list .card__dates {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 32px;
+}
+main .events__list .card__dates p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #727272;
+}
+main .events__list .card__dates span {
+  font-size: 16px;
+  font-weight: 500;
+}
+main .events__list .card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+main .events__list .card__wrapper p {
+  font-size: 14px;
+  font-weight: 500;
+}
+main .events__list .card__wrapper button,
+main .events__list .card__wrapper a {
+  display: flex;
+  height: 56px;
+  padding: 20px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: #142bfd;
+  width: 100%;
+}
+main .events__list .card__wrapper button:hover,
+main .events__list .card__wrapper a:hover {
+  background-color: #0013c2;
 }/*# sourceMappingURL=style-detail.css.map */

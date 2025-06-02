@@ -1,0 +1,171 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    background-color: $primary-light;
+    position: relative;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: 'Roboto';
+}
+
+input {
+    font-family: 'Roboto';
+}
+
+a {
+    @include link;
+}
+
+p,
+h1,
+h2,
+h3,
+span {
+    color: $primary-dark;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    .content {
+        position: relative;
+        display: flex;
+        margin-top: 130px;
+        z-index: 100;
+
+        #zmeya-1 {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            z-index: 99;
+            width: 580px;
+            height: 564px;
+        }
+
+        #zmeya-2 {
+            position: absolute;
+            bottom: -100px;
+            right: 0;
+            z-index: 99;
+            width: 612.699px;
+            height: 591.149px;
+        }
+
+        #smile-1 {
+            position: absolute;
+            top: -105px;
+            left: 15%;
+            z-index: 99;
+        }
+
+        #smile-2 {
+            position: absolute;
+            top: -50px;
+            left: 35%;
+            right: 0px;
+            z-index: 101;
+        }
+
+        #smile-3 {
+            position: absolute;
+            top: -50px;
+            right: 35%;
+            z-index: 101;
+        }
+
+        #smile-4 {
+            position: absolute;
+            top: -105px;
+            right: 15%;
+            z-index: 99;
+        }
+
+        #smile-5 {
+            position: absolute;
+            bottom: -80px;
+            left: 15%;
+            z-index: 99;
+        }
+
+        #smile-6 {
+            position: absolute;
+            bottom: -50px;
+            right: 45%;
+            z-index: 101;
+            width: 92.614px;
+            height: 92.614px;
+            transform: rotate(3.972deg);
+        }
+
+        #smile-7 {
+            position: absolute;
+            bottom: -22%;
+            right: 17%;
+            z-index: 99;
+            transform: rotateY(-26.54deg);
+        }
+
+        &__container {
+            position: relative;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            padding: 120px;
+            border-radius: $border-radius-xl;
+            background: linear-gradient(103deg, rgba(249, 104, 255, 0.1) 0%, rgba(151, 255, 198, 0.1) 100%);
+
+            backdrop-filter: blur(10px);
+        }
+
+        &__title {
+            font-size: 120px;
+            font-weight: 900;
+            color: $primary-blue;
+            margin-bottom: $margin-xs;
+            text-align: center;
+        }
+
+        &__description {
+            margin-bottom: $margin-xl;
+            font-size: 42px;
+            font-weight: 500;
+            color: #001a34;
+            text-align: center;
+        }
+
+        a {
+            @include button-main;
+            max-width: 252px;
+            font-size: 16px;
+            font-weight: 500;
+            align-self: center;
+        }
+    }
+}
