@@ -128,6 +128,8 @@ input {
 }
 
 .footer {
+  position: relative;
+  z-index: 110;
   background-color: #0d0d12;
   border-radius: 42px 42px 0 0;
 }

@@ -1,5 +1,23 @@
 @import './_vars.scss';
 
+@mixin link {
+    color: $primary-dark;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 0;
+    &:hover {
+        color: $primary-blue;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 12px;
+    }
+}
+
 @mixin label {
     padding: $margin-xxs 8px;
     border-radius: $border-radius-s;
@@ -63,12 +81,22 @@
     background-color: transparent;
     border: 1px solid $primary-blue;
     color: $primary-blue;
+
+    &:hover {
+        background-color: $primary-blue;
+        color: $primary-light;
+    }
 }
 
 @mixin button-outlined-v2 {
     @include button-default;
     background-color: #f0f6ff;
     color: $primary-blue;
+
+    &:hover {
+        background-color: $primary-blue;
+        color: $primary-light;
+    }
 }
 
 @mixin card-item {

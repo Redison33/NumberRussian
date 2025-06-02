@@ -22,6 +22,245 @@
   font-weight: 700;
   font-style: normal;
 }
+@media screen and (max-width: 1024px) {
+  main .banner {
+    padding: 30px 0px;
+    margin: 0 32px 48px;
+  }
+  main .banner__text__title {
+    font-size: 42px;
+  }
+  main .banner__text__description {
+    font-size: 16px;
+  }
+  main .catalog {
+    position: relative;
+  }
+  main .catalog svg {
+    position: absolute;
+    z-index: 100;
+  }
+  main .catalog .svg-1 {
+    top: 275px;
+    right: 0px;
+  }
+  main .catalog .svg-2 {
+    top: 663px;
+  }
+  main .catalog .svg-3 {
+    right: -154px;
+    bottom: -346px;
+  }
+  main .catalog button {
+    position: relative;
+    z-index: 110;
+    display: flex;
+    height: 56px;
+    padding: 20px 42px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #142bfd;
+    color: #142bfd;
+    max-width: 212px;
+    align-self: center;
+    margin-bottom: 32px;
+  }
+  main .catalog button:hover {
+    background-color: #142bfd;
+    color: #ffffff;
+  }
+  main .catalog__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  main .catalog__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  main .catalog__inputs__switch {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  main .catalog__inputs__switch p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  main .catalog__inputs__switch .switch {
+    position: relative;
+    display: inline-block;
+    width: 41px;
+    height: 23px;
+  }
+  main .catalog__inputs__switch .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  main .catalog__inputs__switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+  }
+  main .catalog__inputs__switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  main .catalog__inputs__switch input:checked + .slider {
+    background-color: #00c006;
+  }
+  main .catalog__inputs__switch input:focus + .slider {
+    box-shadow: 0 0 1px #00c006;
+  }
+  main .catalog__inputs__switch input:checked + .slider:before {
+    transform: translateX(16px);
+  }
+  main .catalog__inputs__switch .slider.round {
+    border-radius: 34px;
+  }
+  main .catalog__inputs__switch .slider.round:before {
+    border-radius: 50%;
+  }
+  main .catalog__inputs__search {
+    display: flex;
+    width: 341px;
+    height: 60px;
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid #f0f6ff;
+    background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
+    padding: 20px;
+  }
+  main .catalog__inputs__search button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+  main .catalog__inputs__search input {
+    border: none;
+    outline: none;
+    background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
+  }
+  main .catalog__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    z-index: 100;
+    margin-bottom: 32px;
+  }
+  main .catalog__grid .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f6ff;
+    border-radius: 24px;
+    padding: 20px;
+    z-index: 110;
+  }
+  main .catalog__grid .card__title {
+    height: 70px;
+    margin-bottom: 24px;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: #0d0d12;
+  }
+  main .catalog__grid .card__labels {
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  main .catalog__grid .card__labels__item {
+    padding: 4px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  main .catalog__grid .card__dates {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 32px;
+  }
+  main .catalog__grid .card__dates p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #727272;
+  }
+  main .catalog__grid .card__dates span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  main .catalog__grid .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  main .catalog__grid .card__wrapper p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  main .catalog__grid .card__wrapper button {
+    display: flex;
+    height: 56px;
+    padding: 20px 42px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #142bfd;
+    width: 100%;
+  }
+  main .catalog__grid .card__wrapper button:hover {
+    background-color: #0013c2;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  main .catalog__grid .catalog__grid__item {
+    animation-fill-mode: both;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -49,6 +288,7 @@ body {
   padding: 0;
   background-color: #ffffff;
   position: relative;
+  overflow-x: hidden;
 }
 
 button {
@@ -57,6 +297,25 @@ button {
 
 input {
   font-family: "Roboto";
+}
+
+a {
+  color: #0d0d12;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  padding: 10px 0;
+}
+a:hover {
+  color: #142bfd;
+}
+@media screen and (max-width: 1024px) {
+  a {
+    font-size: 12px;
+  }
 }
 
 p,
@@ -83,7 +342,7 @@ span {
   font-size: 16px;
   font-weight: 400;
 }
-.breadcrumbs span:first-child {
+.breadcrumbs a:first-child {
   color: #142bfd;
 }
 
@@ -98,6 +357,7 @@ main .banner__container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 0px 32px;
   align-items: center;
   gap: 12px;
 }
@@ -140,11 +400,56 @@ main .banner__button {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #142bfd;
 }
 main .banner__button:hover {
   background-color: #0013c2;
+}
+main .catalog {
+  position: relative;
+}
+main .catalog svg {
+  position: absolute;
+  z-index: 100;
+}
+main .catalog .svg-1 {
+  top: 275px;
+  right: 0px;
+}
+main .catalog .svg-2 {
+  top: 663px;
+}
+main .catalog .svg-3 {
+  right: -154px;
+  bottom: -346px;
+}
+main .catalog button {
+  position: relative;
+  z-index: 110;
+  display: flex;
+  height: 56px;
+  padding: 20px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: transparent;
+  border: 1px solid #142bfd;
+  color: #142bfd;
+  max-width: 212px;
+  align-self: center;
+  margin-bottom: 32px;
+}
+main .catalog button:hover {
+  background-color: #142bfd;
+  color: #ffffff;
 }
 main .catalog__container {
   display: flex;
@@ -198,10 +503,10 @@ main .catalog__inputs__switch .slider:before {
   transition: 0.4s;
 }
 main .catalog__inputs__switch input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #00c006;
 }
 main .catalog__inputs__switch input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #00c006;
 }
 main .catalog__inputs__switch input:checked + .slider:before {
   transform: translateX(16px);
@@ -214,6 +519,8 @@ main .catalog__inputs__switch .slider.round:before {
 }
 main .catalog__inputs__search {
   display: flex;
+  width: 341px;
+  height: 60px;
   gap: 8px;
   border-radius: 12px;
   border: 1px solid #f0f6ff;
@@ -225,6 +532,7 @@ main .catalog__inputs__search button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin-bottom: 0;
 }
 main .catalog__inputs__search input {
   border: none;
@@ -235,6 +543,8 @@ main .catalog__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
+  z-index: 100;
+  margin-bottom: 32px;
 }
 main .catalog__grid .card {
   display: flex;
@@ -243,6 +553,7 @@ main .catalog__grid .card {
   background-color: #f0f6ff;
   border-radius: 24px;
   padding: 20px;
+  z-index: 110;
 }
 main .catalog__grid .card__title {
   height: 70px;
@@ -302,10 +613,24 @@ main .catalog__grid .card__wrapper button {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #142bfd;
   width: 100%;
 }
 main .catalog__grid .card__wrapper button:hover {
   background-color: #0013c2;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main .catalog__grid .catalog__grid__item {
+  animation-fill-mode: both;
 }/*# sourceMappingURL=style-catalog.css.map */

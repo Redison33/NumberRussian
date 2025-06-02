@@ -100,6 +100,8 @@ input {
     }
 }
 .footer {
+    position: relative;
+    z-index: 110;
     background-color: $primary-dark;
     border-radius: $border-radius-xl $border-radius-xl 0 0;
     &__container {
