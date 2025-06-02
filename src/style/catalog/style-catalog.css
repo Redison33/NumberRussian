@@ -140,7 +140,8 @@ main .banner__button {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #142bfd;
 }
 main .banner__button:hover {
@@ -302,7 +303,8 @@ main .catalog__grid .card__wrapper button {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #142bfd;
   width: 100%;
 }
