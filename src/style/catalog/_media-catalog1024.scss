@@ -1,0 +1,204 @@
+// @import '../fonts.scss';
+// @import '_common-catalog.scss';
+// @import '_media-catalog1024.scss';
+// @import '_media-catalog720.scss';
+// @import '_media-catalog320.scss';
+
+@media screen and (max-width: 1024px) {
+    .container {
+    }
+
+    .breadcrumbs {
+    }
+
+    main {
+        .banner {
+            padding: 30px 0px;
+            margin: 0 32px $margin-l;
+
+            &__container {
+            }
+
+            &__labels {
+                &__item {
+                }
+            }
+
+            &__text {
+                &__title {
+                    font-size: 42px;
+                }
+
+                &__description {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .catalog {
+            position: relative;
+
+            svg {
+                position: absolute;
+                z-index: 100;
+            }
+
+            .svg-1 {
+                top: 275px;
+                right: 0px;
+            }
+
+            .svg-2 {
+                top: 663px;
+            }
+
+            .svg-3 {
+                right: -154px;
+                bottom: -346px;
+            }
+
+            button {
+                position: relative;
+                z-index: 110;
+                @include button-outlined;
+                max-width: 212px;
+                align-self: center;
+                margin-bottom: $margin-m;
+            }
+
+            &__container {
+                display: flex;
+                flex-direction: column;
+                gap: $margin-m;
+            }
+
+            &__inputs {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: $margin-m;
+
+                &__switch {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    .switch {
+                        position: relative;
+                        display: inline-block;
+                        width: 41px;
+                        height: 23px;
+                    }
+
+                    .switch input {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                    }
+
+                    .slider {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #ccc;
+                        -webkit-transition: 0.4s;
+                        transition: 0.4s;
+                    }
+
+                    .slider:before {
+                        position: absolute;
+                        content: '';
+                        height: 16px;
+                        width: 16px;
+                        left: 4px;
+                        bottom: 4px;
+                        background-color: white;
+                        -webkit-transition: 0.4s;
+                        transition: 0.4s;
+                    }
+
+                    input:checked + .slider {
+                        background-color: #00c006;
+                    }
+
+                    input:focus + .slider {
+                        box-shadow: 0 0 1px #00c006;
+                    }
+
+                    input:checked + .slider:before {
+                        -webkit-transform: translateX(16px);
+                        -ms-transform: translateX(16px);
+                        transform: translateX(16px);
+                    }
+
+                    .slider.round {
+                        border-radius: 34px;
+                    }
+
+                    .slider.round:before {
+                        border-radius: 50%;
+                    }
+                }
+
+                &__search {
+                    display: flex;
+                    width: 341px;
+                    height: 60px;
+                    gap: 8px;
+                    border-radius: $border-radius-m;
+                    border: 1px solid #f0f6ff;
+                    background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
+                    padding: $margin-s;
+
+                    button {
+                        @include button-reset;
+                        margin-bottom: 0;
+                    }
+
+                    input {
+                        border: none;
+                        outline: none;
+
+                        background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
+                    }
+                }
+            }
+
+            &__grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: $margin-xs;
+                z-index: 100;
+                margin-bottom: 32px;
+
+                .card {
+                    @include card-item;
+                    z-index: 110;
+                }
+
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                .catalog__grid__item {
+                    animation-fill-mode: both;
+                }
+            }
+        }
+    }
+}
