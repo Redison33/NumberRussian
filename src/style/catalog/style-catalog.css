@@ -228,7 +228,8 @@
     font-size: 14px;
     font-weight: 500;
   }
-  main .catalog__grid .card__wrapper button {
+  main .catalog__grid .card__wrapper button,
+  main .catalog__grid .card__wrapper a {
     display: flex;
     height: 56px;
     padding: 20px 42px;
@@ -244,7 +245,8 @@
     background-color: #142bfd;
     width: 100%;
   }
-  main .catalog__grid .card__wrapper button:hover {
+  main .catalog__grid .card__wrapper button:hover,
+  main .catalog__grid .card__wrapper a:hover {
     background-color: #0013c2;
   }
   @keyframes fadeIn {
@@ -328,11 +330,6 @@ span {
   padding: 0;
 }
 
-.container {
-  max-width: 1376px;
-  margin: 0 auto;
-}
-
 .breadcrumbs {
   margin-bottom: 32px;
   display: flex;
@@ -341,9 +338,6 @@ span {
   justify-content: center;
   font-size: 16px;
   font-weight: 400;
-}
-.breadcrumbs a:first-child {
-  color: #142bfd;
 }
 
 main .banner {
@@ -534,6 +528,9 @@ main .catalog__inputs__search button {
   cursor: pointer;
   margin-bottom: 0;
 }
+main .catalog__inputs__search button:hover {
+  background-color: transparent;
+}
 main .catalog__inputs__search input {
   border: none;
   outline: none;
@@ -602,7 +599,8 @@ main .catalog__grid .card__wrapper p {
   font-size: 14px;
   font-weight: 500;
 }
-main .catalog__grid .card__wrapper button {
+main .catalog__grid .card__wrapper button,
+main .catalog__grid .card__wrapper a {
   display: flex;
   height: 56px;
   padding: 20px 42px;
@@ -618,7 +616,8 @@ main .catalog__grid .card__wrapper button {
   background-color: #142bfd;
   width: 100%;
 }
-main .catalog__grid .card__wrapper button:hover {
+main .catalog__grid .card__wrapper button:hover,
+main .catalog__grid .card__wrapper a:hover {
   background-color: #0013c2;
 }
 @keyframes fadeIn {
