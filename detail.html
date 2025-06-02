@@ -3,13 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/libs/slick.css" />
         <link rel="stylesheet" href="./src/style/normalize.css" />
         <link rel="stylesheet" href="./src/style/index/style-index.css" />
         <link rel="stylesheet" href="./src/style/general/style-general.css" />
-        <link rel="stylesheet" href="./src/style/catalog/style-catalog.css" />
+        <link rel="stylesheet" href="./src/style/detail/style-detail.css" />
         <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon" />
-        <title>Каталог мероприятий</title>
-        <script defer src="./src/js/catalog.js"></script>
+        <title>Марафон проектных идей «IT. Вызов»</title>
+        <script defer src="./src/libs/jquery-3.6.4.min.js"></script>
+        <script defer src="./src/libs/slick.min.js"></script>
+        <script defer src="./src/js/detail.js"></script>
     </head>
     <body>
         <header class="header">
@@ -146,445 +149,304 @@
                     stroke-linejoin="round" />
             </svg>
 
-            <a href="#" style="color: #142bfd">Мероприятия</a>
+            <a href="#">Мероприятия</a>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                <path
+                    d="M12.5 5.5L1.5 5.5M1.5 5.5L5.625 9.625M1.5 5.5L5.625 1.375"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
+            <a href="#" style="color: #142bfd">Марафон проектных идей «IT. Вызов»</a>
+        </section>
+
+        <section class="banner">
+            <div class="container banner__container">
+                <ul class="banner__labels">
+                    <li class="banner__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
+                    <li class="banner__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
+                    <li class="banner__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
+                    <li class="banner__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
+                </ul>
+
+                <div class="banner__text">
+                    <h1 class="banner__text__title">Марафон проектных идей <br />«IT. Вызов»</h1>
+
+                    <p class="banner__text__description">
+                        С&nbsp;4&nbsp;по&nbsp;18&nbsp;августа на&nbsp;Камчатке состоится Всероссийский экологический молодёжный форум
+                        &laquo;Экосистема. Заповедный край&raquo; платформы Росмолодёжь. Форумы. Ключевой темой форума в&nbsp;2025 году станет
+                        устойчивая энергетика.
+                    </p>
+                </div>
+
+                <div class="banner__wrap">
+                    <button class="banner__wrap__button button">Зарегистрироваться</button>
+                    <button class="banner__wrap__button banner__wrap__button-2 button">Свободное посещение</button>
+
+                    <div class="banner__wrap__description">
+                        <p>Даты проведения:</p>
+                        <span>2 июня – 23 сентября</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <main>
-            <section class="banner">
-                <div class="container banner__container">
-                    <ul class="banner__labels">
-                        <li class="banner__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                        <li class="banner__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                        <li class="banner__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                        <li class="banner__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                    </ul>
+            <section class="master">
+                <div class="master__container container">
+                    <div class="master__main">
+                        <h2 class="master__main__title">Во Владимире прошел мастер-класс по IT</h2>
 
-                    <div class="banner__text">
-                        <h1 class="banner__text__title">Марафон проектных идей <br />«IT. Вызов»</h1>
+                        <div class="master__main__wrap">
+                            <p class="master__main__wrap__description">
+                                На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой грамотности.
+                                Волонтёр проекта <a href="#">«Цифровая Россия»</a> Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и VR-очки
+                                позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого космонавта
+                                Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду будущего.
+                            </p>
 
-                        <p class="banner__text__description">
-                            С&nbsp;4&nbsp;по&nbsp;18&nbsp;августа на&nbsp;Камчатке состоится Всероссийский экологический молодёжный форум
-                            &laquo;Экосистема. Заповедный край&raquo; платформы Росмолодёжь. Форумы. Ключевой темой форума в&nbsp;2025 году станет
-                            устойчивая энергетика.
-                        </p>
+                            <h4 class="master__main__wrap__question">Почему это важно для учащихся?</h4>
+                            <ol class="master__main__wrap__list">
+                                <li class="master__main__wrap__list__item">
+                                    <span>Интерактивное обучение</span> – такой формат гораздо эффективнее лекций
+                                </li>
+                                <li class="master__main__wrap__list__item">
+                                    <span>Новые навыки</span> – работа с VR открывает возможности в цифровых профессиях
+                                </li>
+                                <li class="master__main__wrap__list__item">
+                                    <span>Практическое применение знаний</span> – VR-технологии активно используются в бизнес-аналитике, маркетинге и
+                                    IT-разработке
+                                </li>
+                            </ol>
+
+                            <article class="master__main__wrap__card">
+                                <h3 class="master__main__wrap__card__title">Денис Калараш (цифровой волонтёр), о технологии VR</h3>
+
+                                <p class="master__main__wrap__card__description">
+                                    «VR – это не только развлечения. В бизнесе и науке виртуальная реальность помогает моделировать процессы,
+                                    проводить тренинги и визуализировать данные. Учащимся важно осваивать эти технологии уже сейчас – они будут
+                                    востребованы в их будущей карьере».
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="master__main__section">
+                            <h3 class="master__main__section__title">Почему это важно для учащихся?</h3>
+
+                            <div class="master__main__section__wrap">
+                                <p>
+                                    На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего. На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего.
+                                </p>
+                                <p>
+                                    На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего.
+                                </p>
+                            </div>
+
+                            <img src="./src/img/detail-students.png" alt="Учащиеся" />
+
+                            <div class="master__main__section__wrap">
+                                <p>
+                                    На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего. На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего.
+                                </p>
+
+                                <p>
+                                    На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего.
+                                </p>
+
+                                <p>
+                                    На базе кафедры бизнес-информатики и экономики ИЭиТ ВлГУ прошел интерактивный мастер-класс по цифровой
+                                    грамотности. Волонтёр проекта «Цифровая Россия» Денис Калараш познакомил слушателей «Школы предпринимательства» -
+                                    учащихся 10-х классов - с передовыми технологиями виртуальной реальности. Специально подготовленные фильмы и
+                                    VR-очки позволили участникам «побывать» в космосе, рассмотреть планеты и даже почувствовать себя на месте первого
+                                    космонавта Земли. Мастер-класс стал не просто демонстрацией технологий, а полноценным погружением в цифровую среду
+                                    будущего.
+                                </p>
+
+                                <p class="master__main__section__wrap__text">
+                                    Этот мастер-класс показал, что современное образование – это не только теория, но и инновационные практики.
+                                </p>
+
+                                <div class="master__main__section__wrap__date">
+                                    <span>Опубликовано:</span>
+                                    <p>7 мая 2025</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <button class="banner__button button">Зарегистрироваться</button>
+                    <div class="master__aside">
+                        <div class="master__aside__card">
+                            <h5 class="master__aside__card__title">Информация</h5>
+
+                            <div class="master__aside__card__wrap">
+                                <p>Даты проведения:</p>
+                                <strong>2 декабря — 23 января</strong>
+                            </div>
+
+                            <div class="master__aside__card__wrap">
+                                <p>Место проведения:</p>
+                                <strong>Областной Дом молодежи (г. Владимир, ул. Дзержинского, 5)</strong>
+                            </div>
+
+                            <div class="master__aside__card__wrap">
+                                <p>Начало мероприятия:</p>
+                                <strong>12:30 <span>(по Московскому времени)</span></strong>
+                            </div>
+
+                            <div class="master__aside__card__wrap">
+                                <p>Онлайн трансляция:</p>
+                                <a href="#">Telemost</a>
+                            </div>
+                        </div>
+
+                        <div class="master__aside__wrap">
+                            <div class="master__aside__wrap__text">
+                                <p>Дата окончания регистрации:</p>
+                                <strong>23 сентября 2025</strong>
+                            </div>
+
+                            <div class="master__aside__wrap__buttons">
+                                <button class="master__aside__wrap__buttons__item button">Зарегистрироваться</button>
+
+                                <button class="master__aside__wrap__buttons__item button">Свободное посещение</button>
+                            </div>
+                        </div>
+
+                        <div class="master__aside__reglament">
+                            <h5 class="master__aside__reglament__title">Регламент и критерии участия</h5>
+
+                            <ul>
+                                <li>
+                                    <button><img src="./src/img/folder-icon.svg" /></button>
+                                    <div>
+                                        <p>Регламент мероприятия</p>
+                                        <span>1.2 Mb</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button><img src="./src/img/folder-icon.svg" /></button>
+                                    <div>
+                                        <p>Документ 2</p>
+                                        <span>191.9 Mb</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="master__aside__socials">
+                            <li>
+                                <a href="#"><img src="./src/img/tg.svg" alt="TG" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./src/img/vk.svg" alt="VK" /></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <section class="catalog">
-                <svg class="svg-1" xmlns="http://www.w3.org/2000/svg" width="236" height="588" viewBox="0 0 236 588" fill="none">
-                    <path
-                        d="M453.775 458.468C300.559 423.807 14.8346 309.478 97.6571 129.444C181.745 -53.3412 408.009 29.2813 419.844 194.638C427.437 300.717 376.305 487.603 25.8371 561.828"
-                        stroke="url(#paint0_linear_255_3485)"
-                        stroke-width="51"
-                        stroke-linecap="round" />
-                    <defs>
-                        <lineargradient
-                            id="paint0_linear_255_3485"
-                            x1="374.885"
-                            y1="456.762"
-                            x2="105.342"
-                            y2="88.1497"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#97FFC6" />
-                            <stop offset="1" stop-color="#F3FFF8" />
-                        </lineargradient>
-                    </defs>
-                </svg>
+            <section class="banner-big">
+                <div class="banner-big__container container">
+                    <h3 class="banner-big__title">Участникам проекта</h3>
 
-                <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="249" height="620" viewBox="0 0 249 620" fill="none">
-                    <path
-                        d="M-247.987 322.314C-96.9517 279.134 208.573 242.196 222.388 439.885C236.415 640.595 -15.7707 612.079 -91.5217 537.432C-167.273 462.785 -194.029 259.554 77.7311 26.1359"
-                        stroke="url(#paint0_linear_255_3487)"
-                        stroke-width="51"
-                        stroke-linecap="round" />
-                    <defs>
-                        <lineargradient
-                            id="paint0_linear_255_3487"
-                            x1="80.9042"
-                            y1="618.546"
-                            x2="-172.475"
-                            y2="112.462"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FED7FF" />
-                            <stop offset="1" stop-color="#F960FF" />
-                        </lineargradient>
-                    </defs>
-                </svg>
-
-                <svg class="svg-3" xmlns="http://www.w3.org/2000/svg" width="1920" height="795" viewBox="0 0 1920 795" fill="none">
-                    <path
-                        d="M31.8338 532.999L10.0735 519.705L31.8338 532.999ZM-396.666 761.999L-399.048 736.611L-396.666 761.999ZM-130.375 31.9693C-127.078 18.2773 -135.505 4.50531 -149.197 1.20862C-162.889 -2.08808 -176.661 6.33899 -179.958 20.0309L-130.375 31.9693ZM1216.33 359.5L1218.74 334.114L1216.33 359.5ZM524.834 56.5002L524.834 31.0002C431.787 31.0002 358.478 50.7779 299.409 84.3921C240.422 117.96 197.199 164.436 162.962 215.483C128.902 266.265 103.296 322.277 80.022 375.064C56.3959 428.648 35.4607 478.152 10.0735 519.705L31.8338 532.999L53.594 546.294C81.2068 501.098 103.748 447.664 126.687 395.639C149.978 342.816 174.025 290.547 205.317 243.892C236.431 197.501 274.26 157.384 324.633 128.717C374.926 100.097 439.288 82.0002 524.834 82.0002L524.834 56.5002ZM31.8338 532.999L10.0735 519.705C-31.9171 588.435 -79.2356 636.803 -142.296 670.896C-205.874 705.27 -287.281 726.128 -399.048 736.611L-396.666 761.999L-394.285 787.388C-279.051 776.58 -190.044 754.688 -118.041 715.759C-45.5184 676.55 7.91298 621.064 53.594 546.294L31.8338 532.999ZM-396.666 761.999L-399.048 736.611C-488.547 745.005 -563.003 745.082 -622.203 737.574C-681.776 730.02 -723.682 715.055 -750.146 695.25C-775.402 676.349 -787.468 652.53 -787.5 622.122C-787.533 590.107 -774.139 548.738 -742.688 497.405L-764.432 484.083L-786.176 470.762C-819.975 525.929 -838.548 576.799 -838.5 622.175C-838.451 669.157 -818.388 707.88 -780.703 736.082C-744.225 763.382 -692.376 780.084 -628.619 788.169C-564.488 796.302 -486.036 795.994 -394.285 787.388L-396.666 761.999ZM-764.432 484.083L-742.688 497.405C-715.02 452.245 -676.353 433.616 -627.54 423.874C-602.607 418.898 -575.749 416.399 -546.506 413.854C-517.707 411.347 -486.695 408.802 -455.567 403.563C-392.689 392.98 -327.295 371.111 -269.266 314.537C-211.622 258.338 -163.673 170.265 -130.375 31.9693L-155.166 26.0001L-179.958 20.0309C-211.91 152.735 -256.431 230.797 -304.868 278.02C-352.921 324.868 -407.217 343.708 -464.032 353.27C-492.749 358.104 -521.582 360.491 -550.928 363.046C-579.83 365.561 -609.415 368.251 -637.522 373.86C-694.79 385.29 -748.594 409.422 -786.176 470.762L-764.432 484.083ZM1961.33 151.5L1977.63 131.883C1960.72 117.842 1937.83 119.662 1920.97 122.987C1902.19 126.688 1879.91 134.626 1855.74 144.569C1807.91 164.239 1744.17 195.521 1676.19 225.625C1536.82 287.344 1370.38 348.483 1218.74 334.114L1216.33 359.5L1213.93 384.886C1380.09 400.632 1557.49 333.969 1696.84 272.257C1768.22 240.647 1827.55 211.306 1875.14 191.734C1898.67 182.056 1917.16 175.718 1930.83 173.023C1946.41 169.952 1947.62 173.257 1945.04 171.117L1961.33 151.5ZM1216.33 359.5L1218.74 334.114C1169.03 329.404 1128.54 310.177 1088.45 282.341C1046.69 253.35 1009.8 218.612 961.085 180.111C865.396 104.486 742.569 31.0002 524.834 31.0002L524.834 56.5002L524.834 82.0002C728.098 82.0002 840.108 149.504 929.462 220.124C973.27 254.746 1016.45 294.444 1059.36 324.235C1103.94 355.183 1152.72 379.086 1213.93 384.886L1216.33 359.5Z"
-                        fill="url(#paint0_linear_255_3480)" />
-                    <defs>
-                        <lineargradient id="paint0_linear_255_3480" x1="488.834" y1="1122" x2="1246.33" y2="288.5" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#F1D7F2" />
-                            <stop offset="0.366928" stop-color="#FFF5FF" />
-                            <stop offset="1" stop-color="#FEF0FF" />
-                        </lineargradient>
-                    </defs>
-                </svg>
-
-                <div class="container catalog__container">
-                    <div class="catalog__inputs">
-                        <div class="catalog__inputs__switch">
-                            <label class="switch">
-                                <input type="checkbox" />
-                                <span class="slider round"></span>
-                            </label>
-
-                            <p>Доступная регистрация</p>
-                        </div>
-
-                        <div class="catalog__inputs__search">
-                            <button>
-                                <img src="./src/img/search.svg" alt="Поиск" />
-                            </button>
-                            <input type="text" placeholder="Поиск" />
-                        </div>
+                    <div class="banner-big__wrap">
+                        <big class="banner-big__wrap__title">Регламент и критерии участия</big>
+                        <p class="banner-big__wrap__description">
+                            Цифровая трансформация государственного и муниципального управления, экономики и социальной сферы определена Президентом
+                            Российской Федерации в качестве одной из национальных целей развития. От ее достижения во многом зависит обеспечение
+                            национальной безопасности и конкурентоспособности нашей экономики, упрощение получения гражданами всех видов
+                            государственных и муниципальных услуг. Благодаря цифровизации, запись к врачу, в школу или детский сад, оформление личных
+                            документов, различных выписок и справок становится вопросом пары минут. Проект «Цифровая Россия» направлен на создание
+                            равных возможностей в регионах для доступа в интернет и пользования цифровыми услугами, повышение цифровой грамотности
+                            среди населения, защиту их персональных данных, а также развитие IТ–предпринимательства.
+                        </p>
                     </div>
 
-                    <div class="catalog__grid">
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
+                    <ul class="banner-big__buttons">
+                        <li>
+                            <button><img src="./src/img/banner-download.svg" /></button>
+                            <div>
+                                <p>Регламент мероприятия</p>
+                                <span>1.2 Mb</span>
                             </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
+                        </li>
+                        <li>
+                            <button><img src="./src/img/banner-download.svg" /></button>
+                            <div>
+                                <p>Документ 2</p>
+                                <span>191.9 Mb</span>
                             </div>
-                        </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
+            <section class="winners">
+                <div class="winners__container container">
+                    <h3 class="winners__title">
+                        Победители в категории <br />
+                        <span>“Отличная идея”</span>
+                    </h3>
 
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
+                    <div class="party__slider">
+                        <div class="party__slide slide">
+                            <img src="./src/img/party__slide.jpg" alt="" />
+                            <h3 class="slide__title">Жильцова Мария Валерьевна</h3>
+                            <div class="slide__prize">
+                                <h4>1 место</h4>
+                                <p>Категория: <span>IT—Будущее</span></p>
+                                <img src="./src/img/prize.png" alt="" />
                             </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
+                            <div class="slide__buttons">
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19ZM12.28 15.78L10.28 17.78C10.21 17.85 10.12 17.91 10.03 17.94C9.94 17.98 9.85 18 9.75 18C9.65 18 9.56 17.98 9.47 17.94C9.39 17.91 9.31 17.85 9.25 17.79C9.24 17.78 9.23 17.78 9.23 17.77L7.23 15.77C6.94 15.48 6.94 15 7.23 14.71C7.52 14.42 8 14.42 8.29 14.71L9 15.44V11.25C9 10.84 9.34 10.5 9.75 10.5C10.16 10.5 10.5 10.84 10.5 11.25V15.44L11.22 14.72C11.51 14.43 11.99 14.43 12.28 14.72C12.57 15.01 12.57 15.49 12.28 15.78Z"
+                                            fill="#142BFD" />
+                                        <path
+                                            d="M17.43 8.80999C18.38 8.81999 19.7 8.81999 20.83 8.81999C21.4 8.81999 21.7 8.14999 21.3 7.74999C19.86 6.29999 17.28 3.68999 15.8 2.20999C15.39 1.79999 14.68 2.07999 14.68 2.64999V6.13999C14.68 7.59999 15.92 8.80999 17.43 8.80999Z"
+                                            fill="#142BFD" />
+                                    </svg>
+                                    Презентация
+                                </a>
+                                <a href="">Подробнее</a>
                             </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
-
-                        <article class="catalog__grid__item card">
-                            <h3 class="card__title">Марафон проектных идей</h3>
-
-                            <ul class="card__labels">
-                                <li class="card__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
-                                <li class="card__labels__item" style="background-color: #ffd5bc">Лидеры объединений</li>
-                                <li class="card__labels__item" style="background-color: #abff9c">Студенты ВУЗов</li>
-                                <li class="card__labels__item" style="background-color: #a3ffe1">Молодые предприниматели</li>
-                            </ul>
-
-                            <div class="card__dates">
-                                <p>Даты проведения</p>
-                                <span>2 - 23 января</span>
-                            </div>
-
-                            <div class="card__wrapper">
-                                <p class="card__wrapper__status--success" style="color: #00c006">Регистрация открыта</p>
-                                <button class="button card__wrapper__button">Подробнее</button>
-                            </div>
-                        </article>
+                        </div>
                     </div>
-
-                    <button class="catalog__button">Показать ещё</button>
                 </div>
             </section>
         </main>

@@ -168,7 +168,8 @@
             font-weight: 500;
         }
 
-        button {
+        button,
+        a {
             @include button-main;
             width: 100%;
         }
