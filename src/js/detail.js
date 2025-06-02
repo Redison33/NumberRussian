@@ -9,3 +9,10 @@ $('.party__slider-1').slick({
     variableWidth: true,
     infinite: false,
 });
+
+$('.photos__slider').slick({
+    slidesToShow: 1,
+    centerMode: true,
+    arrows: true,
+    variableWidth: true,
+});
