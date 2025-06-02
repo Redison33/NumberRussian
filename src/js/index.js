@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.party__slider').slick({
         slidesToShow: 1,
         variableWidth: true,
-        // infinite: true,
+        infinite: false,
         // dots: true,
         // autoplay: true,
         // autoplaySpeed: 5000,

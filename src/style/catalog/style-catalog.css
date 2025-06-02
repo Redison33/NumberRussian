@@ -73,9 +73,15 @@
     align-self: center;
     margin-bottom: 32px;
   }
+  main .catalog button svg path {
+    transition: fill 0.3s ease-in-out;
+  }
   main .catalog button:hover {
     background-color: #142bfd;
     color: #ffffff;
+  }
+  main .catalog button:hover svg path {
+    fill: #ffffff;
   }
   main .catalog__container {
     display: flex;
@@ -244,6 +250,9 @@
     background-color: #142bfd;
     width: 100%;
   }
+  main .catalog__grid .card__wrapper button svg path {
+    transition: fill 0.3s ease-in-out;
+  }
   main .catalog__grid .card__wrapper button:hover {
     background-color: #0013c2;
   }
@@ -404,6 +413,9 @@ main .banner__button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #142bfd;
 }
+main .banner__button svg path {
+  transition: fill 0.3s ease-in-out;
+}
 main .banner__button:hover {
   background-color: #0013c2;
 }
@@ -447,9 +459,15 @@ main .catalog button {
   align-self: center;
   margin-bottom: 32px;
 }
+main .catalog button svg path {
+  transition: fill 0.3s ease-in-out;
+}
 main .catalog button:hover {
   background-color: #142bfd;
   color: #ffffff;
+}
+main .catalog button:hover svg path {
+  fill: #ffffff;
 }
 main .catalog__container {
   display: flex;
@@ -617,6 +635,9 @@ main .catalog__grid .card__wrapper button {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: #142bfd;
   width: 100%;
+}
+main .catalog__grid .card__wrapper button svg path {
+  transition: fill 0.3s ease-in-out;
 }
 main .catalog__grid .card__wrapper button:hover {
   background-color: #0013c2;

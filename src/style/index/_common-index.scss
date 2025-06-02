@@ -162,6 +162,8 @@
             @include header-section;
         }
         .party__slider {
+            position: relative;
+            padding-bottom: 108px;
             .slide {
                 margin: 0 6px;
                 width: 450px;
@@ -239,6 +241,27 @@
                         }
                     }
                 }
+            }
+            .slick-arrow {
+                font-size: 0;
+                background-image: url('../../img/slider-arrow.svg');
+                border: none;
+                background-color: transparent;
+                width: 64px;
+                height: 64px;
+            }
+            .slick-prev {
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                left: calc(50% - 74px);
+            }
+            .slick-next {
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                right: calc(50% - 74px);
+                transform: rotate(180deg);
             }
         }
     }

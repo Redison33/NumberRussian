@@ -106,6 +106,9 @@
   color: #142bfd;
   font-weight: 500;
 }
+.important__container .important__slider .slide a svg path {
+  transition: fill 0.3s ease-in-out;
+}
 .important__container .important__slider .slick-arrow {
   font-size: 0;
   background-image: url("../../img/slider-arrow.svg");
@@ -277,6 +280,9 @@
   background-color: #142bfd;
   width: 100%;
 }
+.events__container .events__grid .card__wrapper button svg path {
+  transition: fill 0.3s ease-in-out;
+}
 .events__container .events__grid .card__wrapper button:hover {
   background-color: #0013c2;
 }
@@ -296,6 +302,16 @@
   background-color: transparent;
   border: 1px solid #142bfd;
   color: #142bfd;
+}
+.events__container .events__button svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.events__container .events__button:hover {
+  background-color: #142bfd;
+  color: #ffffff;
+}
+.events__container .events__button:hover svg path {
+  fill: #ffffff;
 }
 
 .party__container {
@@ -327,6 +343,10 @@
   width: 68px;
   height: 68px;
   border-radius: 24px;
+}
+.party__container .party__slider {
+  position: relative;
+  padding-bottom: 108px;
 }
 .party__container .party__slider .slide {
   margin: 0 6px;
@@ -418,6 +438,16 @@
   border-radius: 62px;
   gap: 8px;
 }
+.party__container .party__slider .slide__buttons a:first-child svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.party__container .party__slider .slide__buttons a:first-child:hover {
+  background-color: #142bfd;
+  color: #ffffff;
+}
+.party__container .party__slider .slide__buttons a:first-child:hover svg path {
+  fill: #ffffff;
+}
 .party__container .party__slider .slide__buttons a:last-child {
   display: flex;
   height: 56px;
@@ -434,6 +464,30 @@
   background-color: #daff62;
   color: #0d0d12;
 }
+.party__container .party__slider .slide__buttons a:last-child svg path {
+  transition: fill 0.3s ease-in-out;
+}
 .party__container .party__slider .slide__buttons a:last-child:hover {
   background-color: #bbe436;
+}
+.party__container .party__slider .slick-arrow {
+  font-size: 0;
+  background-image: url("../../img/slider-arrow.svg");
+  border: none;
+  background-color: transparent;
+  width: 64px;
+  height: 64px;
+}
+.party__container .party__slider .slick-prev {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: calc(50% - 74px);
+}
+.party__container .party__slider .slick-next {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: calc(50% - 74px);
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style-index.css.map */
