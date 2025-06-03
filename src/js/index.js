@@ -46,4 +46,86 @@ document.addEventListener('DOMContentLoaded', () => {
         // autoplay: true,
         // autoplaySpeed: 5000,
     });
+    // const arrGallery = [0, 120, 240, 360, 240, 120];
+    // console.log(document.querySelector('.gallery__slider').querySelectorAll('.slide').length);
+    // for (
+    //     let i = 0;
+    //     document.querySelector('.gallery__slider').querySelectorAll('.slide').length >= arrGallery.length;
+    //     document.querySelector('.gallery__slider').querySelectorAll('.slide').length - arrGallery.length
+    // ) {
+    //     i++;
+    // }
+    // $('.gallery__slider').slick({
+    //     slidesToShow: 1,
+    //     variableWidth: true,
+    //     infinite: false,
+    //     // dots: true,
+    //     // autoplay: true,
+    //     // autoplaySpeed: 5000,
+    // });
+    const paddingPattern = [0, 120, 240, 360, 240, 120];
+    const generatePaddings = (count) => {
+        const paddings = [];
+        for (let i = 0; i < count; i++) {
+            document.querySelector('.gallery__slider').querySelectorAll('.slide')[i].style.paddingTop =
+                paddingPattern[i % paddingPattern.length] + 'px';
+        }
+    };
+    generatePaddings(document.querySelector('.gallery__slider').querySelectorAll('.slide').length);
+    const slider = document.querySelector('.gallery__slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let isDragging = false;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+        isDragging = false;
+        for (const img of slider.querySelectorAll('img')) {
+            img.style.cursor = 'grab';
+        }
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        for (const img of slider.querySelectorAll('img')) {
+            img.removeAttribute('style');
+        }
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        for (const img of slider.querySelectorAll('img')) {
+            img.removeAttribute('style');
+        }
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        const x = e.pageX - slider.offsetLeft;
+        const walk = x - startX;
+        if (Math.abs(walk) > 5) {
+            isDragging = true;
+        }
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    slider.addEventListener('click', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            e.stopPropagation();
+            isDragging = false; // сбрасываем
+        }
+    });
+
+    slider.querySelectorAll('img').forEach((img) => {
+        img.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+    });
+    Fancybox.bind('[data-fancybox]', {
+        // hideScrollbar: false,
+    });
 });
