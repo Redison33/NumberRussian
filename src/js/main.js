@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // HeaderTop
         if (isScrollStart) {
             document.querySelector('.header').removeAttribute('style');
-            document.querySelector('.important').removeAttribute('style');
+            document.querySelector('section').removeAttribute('style');
             document.querySelector('.header__container').removeAttribute('style');
             headerHeight = document.querySelector('.header').scrollHeight;
 
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (isScrollGoDown) {
             // document.querySelector('header').style.marginBottom = '105px';
-            document.querySelector('.important').style.paddingTop = '120px';
+            document.querySelector('section').style.paddingTop = '120px';
             document.querySelector('.header').style.position = 'fixed';
             document.querySelector('.header__container').style.padding = '12px 32px';
             document.querySelector('.header').style.zIndex = 10000;
@@ -197,5 +197,28 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.header').style.boxShadow = '0px 2px 15px 0px rgba(0,0,0,0.25)';
             headerHeight = document.querySelector('.header').scrollHeight;
         }
+    }
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+        },
+    );
+    document.querySelector('.animationDetected');
+    {
+        document.querySelectorAll('.animationDetected').forEach((el) => {
+            console.log(el);
+
+            observer.observe(el);
+            // el.remove();
+        });
     }
 });

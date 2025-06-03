@@ -123,9 +123,10 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #f0f6ff;
+    border: 1px solid #f0f6ff;
     border-radius: $border-radius-l;
     padding: $margin-s;
-
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     &__title {
         height: 70px;
         margin-bottom: 24px;
@@ -183,6 +184,11 @@
             width: 100%;
         }
     }
+    &:hover {
+        border-color: $primary-blue;
+        box-shadow: 0px 268px 75px 0px rgba(20, 43, 253, 0), 0px 172px 69px 0px rgba(20, 43, 253, 0.01), 0px 97px 58px 0px rgba(20, 43, 253, 0.05),
+            0px 43px 43px 0px rgba(20, 43, 253, 0.09), 0px 11px 24px 0px rgba(20, 43, 253, 0.1);
+    }
 }
 @mixin header-section {
     position: relative;
@@ -207,6 +213,7 @@
             height: 68px;
             border-radius: 24px;
             animation: eventsDirection 2s ease 0s infinite normal forwards;
+            animation-play-state: paused;
         }
     }
 }

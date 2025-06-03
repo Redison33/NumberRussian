@@ -1,5 +1,6 @@
 @import '../_vars.scss';
 @import '../_mixin.scss';
+@import '../_animation.scss';
 
 html {
     box-sizing: border-box;
@@ -39,6 +40,12 @@ ul {
 .container {
     max-width: 1376px;
     margin: 0 auto;
+}
+// .animationDetected {
+//     animation-play-state: paused;
+// }
+.visible {
+    animation-play-state: running !important;
 }
 
 .header {
@@ -154,6 +161,7 @@ ul {
                     span {
                         font-size: 18px;
                         font-weight: 600;
+                        color: $primary-light;
                     }
                 }
             }

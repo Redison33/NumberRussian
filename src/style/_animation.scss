@@ -482,3 +482,37 @@
         transform: translateX(calc(-100vw - 400px)) rotate(-169deg);
     }
 }
+
+@keyframes shakeTopBigBanner {
+    0%,
+    100% {
+        transform: translateX(0);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-15px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(5px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-5px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(3px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-2px) rotate(-1.2deg);
+    }
+}
+
+@keyframes rotateBanner {
+    to {
+        transform: rotate(1turn) rotate(29.535deg);
+    }
+}

@@ -67,13 +67,87 @@ span {
 main {
     .banner {
         border-radius: $border-radius-xl;
-        background-image: url('../../img/banner-grid.png');
-        background-color: #142bfd99;
+        background-color: #fff;
         padding: 98px 0px;
         margin: 0 32px $margin-xl;
-
+        position: relative;
+        overflow: hidden;
+        #banner-bg {
+            z-index: 10;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            background-image: url('../../img/banner-grid.svg');
+            background-size: cover;
+        }
+        #banner-1-ellipse {
+            z-index: 1;
+            position: absolute;
+            top: -314px;
+            right: -183px;
+            width: 705.06px;
+            height: 992.913px;
+            transform: rotate(29.535deg);
+            flex-shrink: 0;
+            border-radius: 992.913px;
+            background: rgba(20, 43, 253, 0.6);
+            filter: blur(120px);
+            animation: rotateBanner 20s ease 0s infinite normal forwards;
+            animation-play-state: paused;
+        }
+        #banner-2-ellipse {
+            z-index: 1;
+            position: absolute;
+            top: -99px;
+            left: -343px;
+            width: 561.115px;
+            height: 988.05px;
+            transform: rotate(23.3deg);
+            flex-shrink: 0;
+            border-radius: 988.05px;
+            background: rgba(20, 43, 253, 0.6);
+            filter: blur(120px);
+            animation: rotateBanner 18s ease 0s infinite normal forwards;
+            animation-play-state: paused;
+        }
+        #banner-3-ellipse {
+            z-index: 1;
+            position: absolute;
+            top: 150px;
+            left: 292px;
+            width: 545.344px;
+            height: 960.28px;
+            transform: rotate(-15deg);
+            flex-shrink: 0;
+            border-radius: 960.28px;
+            opacity: 0.6;
+            background: rgba(20, 43, 253, 0.6);
+            filter: blur(120px);
+            animation: rotateBanner 15s ease 0s infinite normal forwards;
+            animation-play-state: paused;
+        }
+        #banner-4-ellipse {
+            z-index: 1;
+            position: absolute;
+            top: -157px;
+            left: 40%;
+            width: 304.345px;
+            height: 535.912px;
+            transform: rotate(-15deg);
+            flex-shrink: 0;
+            border-radius: 535.912px;
+            opacity: 0.6;
+            background: rgba(20, 43, 253, 0.6);
+            filter: blur(120px);
+            animation: rotateBanner 12s ease 0s infinite normal forwards;
+            animation-play-state: paused;
+        }
         &__container {
             display: flex;
+            position: relative;
+            z-index: 100;
             flex-direction: column;
             margin: 0 auto;
             padding: 0px 32px;
@@ -236,21 +310,32 @@ main {
                 border-radius: $border-radius-m;
                 border: 1px solid #f0f6ff;
                 background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
-                padding: $margin-s;
 
                 button {
                     @include button-reset;
                     margin-bottom: 0;
-
+                    min-width: 20px;
+                    padding-left: $margin-s;
+                    svg {
+                        path {
+                            transition: stroke 0.3s ease-in-out;
+                        }
+                    }
                     &:hover {
                         background-color: transparent;
+                        svg {
+                            path {
+                                stroke: $primary-blue;
+                            }
+                        }
                     }
                 }
 
                 input {
+                    width: 100%;
                     border: none;
                     outline: none;
-
+                    padding: $margin-s;
                     background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
                 }
             }

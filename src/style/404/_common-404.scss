@@ -83,6 +83,7 @@ main {
             top: -105px;
             left: 15%;
             z-index: 99;
+            animation-play-state: paused;
         }
 
         #smile-2 {
@@ -91,6 +92,7 @@ main {
             left: 35%;
             right: 0px;
             z-index: 101;
+            animation-play-state: paused;
         }
 
         #smile-3 {
@@ -98,6 +100,7 @@ main {
             top: -50px;
             right: 35%;
             z-index: 101;
+            animation-play-state: paused;
         }
 
         #smile-4 {
@@ -105,6 +108,7 @@ main {
             top: -105px;
             right: 15%;
             z-index: 99;
+            animation-play-state: paused;
         }
 
         #smile-5 {
@@ -112,6 +116,7 @@ main {
             bottom: -80px;
             left: 15%;
             z-index: 99;
+            animation-play-state: paused;
         }
 
         #smile-6 {
@@ -122,6 +127,7 @@ main {
             width: 92.614px;
             height: 92.614px;
             transform: rotate(3.972deg);
+            animation-play-state: paused;
         }
 
         #smile-7 {
@@ -130,6 +136,7 @@ main {
             right: 17%;
             z-index: 99;
             transform: rotateY(-26.54deg);
+            animation-play-state: paused;
         }
 
         &__container {

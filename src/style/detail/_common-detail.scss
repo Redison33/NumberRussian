@@ -1,5 +1,6 @@
 @import '../_vars.scss';
 @import '../_mixin.scss';
+@import '../_animation.scss';
 
 html {
     box-sizing: border-box;
@@ -149,9 +150,13 @@ span {
 
 main {
     .master {
+        position: relative;
+        margin-bottom: 160px;
         &__container {
             display: flex;
+            align-items: start;
             gap: $margin-l;
+            position: relative;
         }
 
         &__main {
@@ -227,8 +232,6 @@ main {
             }
 
             &__section {
-                margin-bottom: 160px;
-
                 &__title {
                     font-size: 24px;
                     font-weight: 500;
@@ -280,7 +283,9 @@ main {
         }
 
         &__aside {
-            position: relative;
+            // position: relative;
+            position: sticky;
+            top: 0;
             z-index: 100;
             width: 30%;
 
@@ -398,20 +403,76 @@ main {
                         align-items: center;
                         gap: $margin-xs;
 
+                        // a {
+                        //     @include button-reset;
+                        // }
+
+                        // div {
+                        //     p {
+                        //         font-size: 16px;
+                        //         font-weight: 500;
+                        //     }
+
+                        //     span {
+                        //         font-size: 14px;
+                        //         font-weight: 400;
+                        //         color: #727272;
+                        //     }
+                        // }
                         a {
-                            @include button-reset;
-                        }
-
-                        div {
-                            p {
-                                font-size: 16px;
-                                font-weight: 500;
+                            display: flex;
+                            gap: $margin-xs;
+                            align-items: center;
+                            text-decoration: none;
+                            padding: 0;
+                            .master__aside__reglament__icon {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 56px;
+                                height: 56px;
+                                padding: 16px;
+                                border-radius: 42px;
+                                background-color: $primary-light;
+                                transition: background-color 0.3s ease-in-out;
+                                svg {
+                                    position: static;
+                                    path {
+                                        transition: fill 0.3s ease-in-out;
+                                    }
+                                }
                             }
-
-                            span {
-                                font-size: 14px;
-                                font-weight: 400;
-                                color: #727272;
+                            p {
+                                display: flex;
+                                flex-direction: column;
+                                margin: 0;
+                                color: $primary-dark;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                transition: color 0.3s ease-in-out;
+                                span {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    transition: color 0.3s ease-in-out;
+                                }
+                            }
+                            &:hover {
+                                .master__aside__reglament__icon {
+                                    background-color: $primary-blue;
+                                    svg {
+                                        path {
+                                            fill: $primary-light;
+                                        }
+                                    }
+                                }
+                                p {
+                                    color: $primary-blue;
+                                    span {
+                                        color: $primary-blue;
+                                    }
+                                }
                             }
                         }
                     }
@@ -431,24 +492,23 @@ main {
                 background-color: #f0f6ff;
                 border-radius: $border-radius-l;
             }
-
-            svg {
-                position: absolute;
-                top: 38%;
-                right: -70%;
-                z-index: 99;
-            }
+        }
+        svg {
+            position: absolute;
+            top: 38%;
+            right: 0;
+            z-index: 99;
         }
     }
 
     .banner-big {
+        margin-bottom: 160px;
         position: relative;
         z-index: 100;
         width: 100%;
         background-color: $primary-blue;
-        background-image: url('../../img/project-background.png');
+        background-image: url('../../img/project-background.svg');
         background-size: cover;
-        margin-bottom: 160px;
         padding: 120px 0;
 
         #banner-1-svg {
@@ -456,13 +516,46 @@ main {
             top: 10%;
             right: 25%;
             z-index: 1;
+            animation: shakeTopBigBanner 2s ease 0s infinite normal forwards;
+            animation-play-state: paused;
         }
 
-        #banner-2-svg {
+        // #banner-2-svg {
+        //     position: absolute;
+        //     bottom: 9%;
+        //     right: 45%;
+        //     z-index: 1;
+        // }
+        &__img-group {
             position: absolute;
             bottom: 9%;
             right: 45%;
             z-index: 1;
+            width: 303px;
+            height: 231px;
+            svg {
+                position: absolute;
+                &:nth-child(1) {
+                    top: -20px;
+                    right: -40px;
+                }
+                &:nth-child(2) {
+                    top: 15px;
+                    right: 20px;
+                    animation: feedbackRotate1 4s infinite linear;
+                    animation-play-state: paused;
+                }
+                &:nth-child(3) {
+                    left: 85px;
+                    bottom: 25px;
+                    animation: feedbackRotate2 2s infinite linear;
+                    animation-play-state: paused;
+                }
+                &:nth-child(4) {
+                    left: 40px;
+                    bottom: 0px;
+                }
+            }
         }
 
         #banner-1-ellipse {
@@ -479,6 +572,8 @@ main {
             opacity: 0.6;
             background: #fff;
             filter: blur(160.35000610351562px);
+            animation: lightDecor1 30s ease 0s infinite normal forwards;
+            animation-play-state: paused;
         }
 
         #banner-2-ellipse {
@@ -494,6 +589,8 @@ main {
             border-radius: 507.125px;
             background: #fff;
             filter: blur(145.10000610351562px);
+            animation: lightDecor2 25s ease 0s infinite normal forwards;
+            animation-play-state: paused;
         }
 
         &__container {
@@ -546,21 +643,61 @@ main {
                 gap: $margin-xs;
                 margin: 0;
 
-                button {
-                    @include button-reset;
-                }
-
-                div {
-                    p {
-                        font-size: 16px;
-                        font-weight: 500;
-                        color: $primary-light;
+                a {
+                    display: flex;
+                    gap: $margin-xs;
+                    align-items: center;
+                    text-decoration: none;
+                    padding: 0;
+                    .banner__icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 56px;
+                        height: 56px;
+                        padding: 16px;
+                        border-radius: 6px;
+                        background-color: $primary-light;
+                        transition: background-color 0.3s ease-in-out;
+                        svg {
+                            position: static;
+                            path {
+                                transition: fill 0.3s ease-in-out;
+                            }
+                        }
                     }
-
-                    span {
-                        font-size: 14px;
-                        font-weight: 400;
+                    p {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0;
                         color: $primary-light;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        transition: color 0.3s ease-in-out;
+                        span {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: $primary-light;
+                            transition: color 0.3s ease-in-out;
+                        }
+                    }
+                    &:hover {
+                        .banner__icon {
+                            background-color: $primary-blue-hover;
+                            svg {
+                                path {
+                                    fill: $primary-light;
+                                }
+                            }
+                        }
+                        // p {
+                        //     color: $primary-blue;
+                        //     span {
+                        //         color: $primary-blue;
+                        //     }
+                        // }
                     }
                 }
             }
@@ -592,14 +729,7 @@ main {
         }
 
         &__title {
-            font-size: 64px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: $margin-xl;
-
-            span {
-                color: $primary-blue;
-            }
+            @include header-section;
         }
 
         .slick-arrow {
@@ -735,14 +865,7 @@ main {
         }
 
         &__title {
-            font-size: 64px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: $margin-xl;
-
-            span {
-                color: $primary-blue;
-            }
+            @include header-section;
         }
 
         .party__slider {
@@ -919,27 +1042,7 @@ main {
         }
 
         &__title {
-            display: flex;
-            flex-direction: column;
-            max-width: 633px;
-            color: $primary-blue;
-            font-size: 64px;
-            font-weight: 600;
-
-            div {
-                align-self: end;
-                margin-right: 30px;
-
-                span {
-                    color: $primary-dark;
-                }
-
-                img {
-                    width: 68px;
-                    height: 68px;
-                    transform: rotate(-7.806deg) translateY(10px);
-                }
-            }
+            @include header-section;
         }
 
         &__list {

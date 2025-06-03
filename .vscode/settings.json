@@ -1,0 +1,26 @@
+{
+    "window.menuBarVisibility": "compact",
+    "editor.minimap.enabled": false,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.semi": true,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.printWidth": 150,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": ["source.addMissingImports"],
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "phase",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.stickyScroll.enabled": false,
+    "tabnine.experimentalAutoImports": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "scss": false
+    }
+}

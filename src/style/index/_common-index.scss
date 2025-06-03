@@ -3,7 +3,7 @@
 @import '../_animation.scss';
 
 .important {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         max-width: unset;
         .important__slider {
@@ -123,6 +123,7 @@
                     position: relative;
                     .progress-bar {
                         animation: progressBar 5s linear forwards;
+                        animation-play-state: paused;
                     }
                 }
             }
@@ -131,7 +132,7 @@
 }
 .events {
     position: relative;
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         position: relative;
         display: flex;
@@ -164,7 +165,7 @@
 }
 
 .party {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         padding: 42px 60px;
         border-radius: 64px;
@@ -279,7 +280,7 @@
 }
 
 .hero {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     position: relative;
     &__container {
         position: relative;
@@ -296,6 +297,7 @@
                 bottom: 134px;
                 left: -70px;
                 animation: shakeTopHero1 3s ease 0s infinite normal forwards;
+                animation-play-state: paused;
             }
             .hero_emoji_anim_2 {
                 position: absolute;
@@ -305,6 +307,7 @@
                 right: 0;
                 top: -35px;
                 animation: shakeTopHero2 3s ease 0s infinite normal forwards;
+                animation-play-state: paused;
             }
             .hero__img {
                 position: relative;
@@ -464,7 +467,7 @@
     }
 }
 .direction {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         h2 {
             @include header-section;
@@ -507,6 +510,7 @@
                     background: linear-gradient(90deg, #abff9c 0%, #fff 100%);
                     img {
                         animation: shakeTopDirection 2s ease 0s infinite normal forwards;
+                        animation-play-state: paused;
                     }
                 }
                 &:nth-child(2) {
@@ -515,6 +519,7 @@
                     background: linear-gradient(90deg, #97f3ff 0%, #fff 100%);
                     img {
                         animation: jelloDirection 2s ease 0s infinite normal forwards;
+                        animation-play-state: paused;
                     }
                 }
                 &:nth-child(3) {
@@ -523,6 +528,7 @@
                     background: linear-gradient(90deg, #d0acff 0%, #fff 100%);
                     img {
                         animation: pulseDirection 2s ease 0s infinite normal forwards;
+                        animation-play-state: paused;
                     }
                 }
                 &:nth-child(4) {
@@ -531,6 +537,7 @@
                     background: linear-gradient(90deg, #ffbdc8 0%, #fff 100%);
                     img {
                         animation: pulseDirection 2s ease 0s infinite normal forwards;
+                        animation-play-state: paused;
                     }
                 }
                 &:nth-child(5) {
@@ -539,6 +546,7 @@
                     background: linear-gradient(90deg, #ffeb9d 0%, #fff 100%);
                     img {
                         animation: shakeTopDirection 2s ease 0s infinite normal forwards;
+                        animation-play-state: paused;
                     }
                 }
             }
@@ -546,7 +554,7 @@
     }
 }
 .volunteers {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         h2 {
             @include header-section;
@@ -579,6 +587,7 @@
                 left: 49%;
                 top: 155px;
                 animation: volunteersBigFire 2s infinite linear;
+                animation-play-state: paused;
             }
             .card {
                 overflow: hidden;
@@ -701,6 +710,7 @@
                                 right: 448px;
                                 top: 14px;
                                 animation: volunteersRunAndRotate1 5s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(2) {
                                 width: 31px;
@@ -714,6 +724,7 @@
                                 top: 26px;
                                 transform: rotate(164deg);
                                 animation: volunteersBoom 1.5s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(4) {
                                 width: 88px;
@@ -721,6 +732,7 @@
                                 top: -10px;
                                 transform: rotate(25deg);
                                 animation: volunteersHeart1 1s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(5) {
                                 width: 30px;
@@ -728,6 +740,7 @@
                                 top: 86px;
                                 transform: rotate(5deg);
                                 animation: volunteersHeart2 1.5s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(6) {
                                 width: 66px;
@@ -754,18 +767,21 @@
                                 bottom: 80px;
                                 transform: rotate(38deg);
                                 animation: volunteersStarsEyes1 3s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(10) {
                                 width: 70px;
                                 right: 467px;
                                 bottom: 20px;
                                 animation: volunteersStarsEyes2 4s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(11) {
                                 width: 42px;
                                 right: 376px;
                                 bottom: 20px;
                                 animation: volunteersBoom 2s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(12) {
                                 width: 30px;
@@ -773,6 +789,7 @@
                                 bottom: 14px;
                                 transform: rotate(-23deg);
                                 animation: volunteersHeart3 2s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(13) {
                                 width: 34px;
@@ -780,6 +797,7 @@
                                 bottom: 14px;
                                 transform: rotate(-17deg);
                                 animation: volunteersStarsEyes3 2.5s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                             &:nth-child(14) {
                                 width: 68px;
@@ -787,6 +805,7 @@
                                 bottom: -26px;
                                 transform: rotate(164deg);
                                 animation: volunteersBoom 2.5s ease 0s infinite normal forwards;
+                                animation-play-state: paused;
                             }
                         }
                     }
@@ -814,6 +833,7 @@
         top: 60px;
         left: 10%;
         animation: feedbackLike 30s infinite linear;
+        animation-play-state: paused;
     }
     .light_decor {
         position: absolute;
@@ -829,6 +849,7 @@
             background: #fff;
             filter: blur(160px);
             animation: lightDecor1 30s ease 0s infinite normal forwards;
+            animation-play-state: paused;
         }
         &-2 {
             width: 234px;
@@ -840,6 +861,7 @@
             background: #fff;
             filter: blur(145px);
             animation: lightDecor2 25s ease 0s infinite normal forwards;
+            animation-play-state: paused;
         }
     }
     &__img-group {
@@ -859,11 +881,13 @@
                 top: 15px;
                 right: 20px;
                 animation: feedbackRotate1 4s infinite linear;
+                animation-play-state: paused;
             }
             &:nth-child(3) {
                 left: 85px;
                 bottom: 25px;
                 animation: feedbackRotate2 2s infinite linear;
+                animation-play-state: paused;
             }
             &:nth-child(4) {
                 left: 40px;
@@ -956,7 +980,7 @@
     }
 }
 .gallery {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         max-width: unset;
         position: relative;
@@ -1002,7 +1026,7 @@
 }
 .news {
     position: relative;
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         position: relative;
         display: flex;
@@ -1094,7 +1118,7 @@
     }
 }
 .contacts {
-    padding-bottom: 160px;
+    margin-bottom: 160px;
     &__container {
         position: relative;
         display: grid;
@@ -1171,6 +1195,7 @@
             left: -50px;
             top: 35%;
             animation: contactsPulse 2s infinite linear;
+            animation-play-state: paused;
         }
         .contacts_emoji_anim_2 {
             width: 88px;
@@ -1178,6 +1203,7 @@
             right: -45px;
             bottom: 33%;
             animation: contactsRotate 4s infinite linear;
+            animation-play-state: paused;
         }
     }
 }
