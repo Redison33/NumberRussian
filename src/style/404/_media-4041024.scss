@@ -1,200 +1,120 @@
-// @import '../fonts.scss';
-// @import '_common-catalog.scss';
-// @import '_media-catalog1024.scss';
-// @import '_media-catalog720.scss';
-// @import '_media-catalog320.scss';
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
-@media screen and (max-width: 1024px) {
-    .breadcrumbs {
-    }
-
+@media screen and (max-width: 1000px) {
     main {
-        .banner {
-            padding: 30px 0px;
-            margin: 0 32px $margin-l;
+        .content {
+            margin-top: 200px;
+            align-items: center;
+            justify-content: center;
 
-            &__container {
-            }
-
-            &__labels {
-                &__item {
-                }
-            }
-
-            &__text {
-                &__title {
-                    font-size: 42px;
-                }
-
-                &__description {
-                    font-size: 16px;
-                }
-            }
-        }
-
-        .catalog {
-            position: relative;
-
-            svg {
+            #zmeya-1 {
                 position: absolute;
-                z-index: 100;
+                bottom: -163%;
+                left: -10%;
+                z-index: 99;
+
+                width: 616.155px;
+                height: 595.301px;
             }
 
-            .svg-1 {
-                top: 275px;
+            #zmeya-2 {
+                position: absolute;
+                bottom: -100px;
+                right: 0;
+                z-index: 99;
+                width: 498.307px;
+                height: 480.78px;
+            }
+
+            #smile-1 {
+                position: absolute;
+                top: -135px;
+                left: 17%;
+                z-index: 99;
+                animation: notFoundVibrate 2s ease 0s infinite normal forwards;
+                animation-play-state: paused;
+            }
+
+            #smile-2 {
+                display: none;
+                position: absolute;
+                top: -50px;
+                left: 22%;
                 right: 0px;
+                z-index: 101;
+                animation: notFoundEyes1 2s ease 0s infinite normal forwards;
+                animation-play-state: paused;
             }
 
-            .svg-2 {
-                top: 663px;
+            #smile-3 {
+                position: absolute;
+                top: -42%;
+                right: 35%;
+                z-index: 101;
+                animation: notFoundShake 2s ease 0s infinite normal forwards;
+                animation-play-state: paused;
             }
 
-            .svg-3 {
-                right: -154px;
-                bottom: -346px;
+            #smile-4 {
+                position: absolute;
+                bottom: -115%;
+                left: 3%;
+                top: unset;
+                right: unset;
+                z-index: 99;
+                animation-play-state: paused;
             }
 
-            button {
-                position: relative;
-                z-index: 110;
-                @include button-outlined;
-                max-width: 212px;
-                align-self: center;
-                margin-bottom: $margin-m;
+            #smile-5 {
+                position: absolute;
+                bottom: -139%;
+                left: 57%;
+                z-index: 99;
+                animation: notFoundShake 3.5s ease 0s infinite normal forwards;
+                animation-play-state: paused;
+            }
+
+            #smile-6 {
+                position: absolute;
+                bottom: -65px;
+                right: 65%;
+                z-index: 101;
+                width: 92.614px;
+                height: 92.614px;
+                transform: rotate(3.972deg);
+                animation: notFoundVibrate 1.5s ease 0s infinite normal forwards;
+                animation-play-state: paused;
+            }
+
+            #smile-7 {
+                position: absolute;
+                bottom: -60%;
+                right: 10%;
+                z-index: 99;
+                transform: rotateY(-26.54deg);
+                animation: notFoundEyes1 3s ease 0s infinite normal forwards;
+                animation-play-state: paused;
             }
 
             &__container {
+                position: relative;
+                z-index: 100;
                 display: flex;
                 flex-direction: column;
-                gap: $margin-m;
+                padding: $margin-l $margin-l;
+                border-radius: $border-radius-xl;
+                background: linear-gradient(103deg, rgba(249, 104, 255, 0.1) 0%, rgba(151, 255, 198, 0.1) 100%);
+
+                backdrop-filter: blur(10px);
             }
 
-            &__inputs {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: $margin-m;
-
-                &__switch {
-                    display: flex;
-                    gap: 8px;
-                    align-items: center;
-
-                    p {
-                        font-size: 16px;
-                        font-weight: 500;
-                    }
-
-                    .switch {
-                        position: relative;
-                        display: inline-block;
-                        width: 41px;
-                        height: 23px;
-                    }
-
-                    .switch input {
-                        opacity: 0;
-                        width: 0;
-                        height: 0;
-                    }
-
-                    .slider {
-                        position: absolute;
-                        cursor: pointer;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: #ccc;
-                        -webkit-transition: 0.4s;
-                        transition: 0.4s;
-                    }
-
-                    .slider:before {
-                        position: absolute;
-                        content: '';
-                        height: 16px;
-                        width: 16px;
-                        left: 4px;
-                        bottom: 4px;
-                        background-color: white;
-                        -webkit-transition: 0.4s;
-                        transition: 0.4s;
-                    }
-
-                    input:checked + .slider {
-                        background-color: #00c006;
-                    }
-
-                    input:focus + .slider {
-                        box-shadow: 0 0 1px #00c006;
-                    }
-
-                    input:checked + .slider:before {
-                        -webkit-transform: translateX(16px);
-                        -ms-transform: translateX(16px);
-                        transform: translateX(16px);
-                    }
-
-                    .slider.round {
-                        border-radius: 34px;
-                    }
-
-                    .slider.round:before {
-                        border-radius: 50%;
-                    }
-                }
-
-                &__search {
-                    display: flex;
-                    width: 341px;
-                    height: 60px;
-                    gap: 8px;
-                    border-radius: $border-radius-m;
-                    border: 1px solid #f0f6ff;
-                    background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
-                    padding: $margin-s;
-
-                    button {
-                        @include button-reset;
-                        margin-bottom: 0;
-                    }
-
-                    input {
-                        border: none;
-                        outline: none;
-
-                        background: linear-gradient(270deg, #f0f6ff 0%, #fff 100%);
-                    }
-                }
+            &__title {
+                font-size: 64px;
             }
 
-            &__grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: $margin-xs;
-                z-index: 100;
-                margin-bottom: 32px;
-
-                .card {
-                    @include card-item;
-                    z-index: 110;
-                }
-
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                        transform: translateY(20px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .catalog__grid__item {
-                    animation-fill-mode: both;
-                }
+            &__description {
+                font-size: 24px;
             }
         }
     }
