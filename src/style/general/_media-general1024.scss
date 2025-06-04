@@ -61,9 +61,10 @@
     }
     .footer {
         &__container {
+            gap: 60px;
             .footer__wrap {
                 &-left {
-                    max-width: 413px;
+                    max-width: 400px;
                     p {
                     }
                 }
