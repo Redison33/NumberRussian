@@ -2,4 +2,38 @@
     .container {
         margin: 0 24px;
     }
+    .footer {
+        &__container {
+            .footer__wrap {
+                &-left {
+                    img {
+                        width: 263px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                &-right {
+                    .footer__logo {
+                    }
+                    p {
+                        span {
+                        }
+                    }
+                }
+                &-bottom {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 12px;
+                    .footer__links {
+                        a {
+                        }
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
 }

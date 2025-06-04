@@ -12,6 +12,15 @@ html {
 *::before {
     box-sizing: inherit;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
 
 img {
     max-width: 100%;
@@ -19,6 +28,7 @@ img {
 
 body {
     min-width: 320px;
+    width: 100%;
     font-family: 'Roboto';
     margin: 0;
     padding: 0;
@@ -51,11 +61,52 @@ ul {
 .header {
     background-color: $primary-light;
     &__container {
-        padding: $margin-m;
+        margin: 0 $margin-m;
+        padding: $margin-m 0;
         max-width: unset;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        .burger-button {
+            border-radius: $border-radius-m;
+            background-color: $primary-blue;
+            width: 40px;
+            height: 40px;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            transition: backround-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: none;
+            span {
+                position: absolute;
+                display: block;
+                right: 10px;
+                left: 10px;
+                height: 2px;
+                background-color: $primary-light;
+                border-radius: 2px;
+                transition: backround-color 0.3s ease-in-out;
+                &:first-child {
+                    top: 12px;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:last-child {
+                    bottom: 12px;
+                }
+            }
+            &:hover {
+                background-color: $primary-light;
+                -webkit-box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+                -moz-box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+                box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.2);
+                span {
+                    background-color: $primary-blue;
+                }
+            }
+        }
         .header__logos {
             display: flex;
             gap: $margin-s;

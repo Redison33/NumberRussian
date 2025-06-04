@@ -10,4 +10,127 @@
 }
 
 @media (max-width: 1440px) {
+    .contacts {
+        &__container {
+            padding-bottom: 96px;
+            display: block;
+            position: relative;
+            margin: 0;
+            .card {
+                width: 445px;
+                margin: 0 10px;
+                .contacts_emoji_anim_1 {
+                    top: 10px;
+                    left: 0px;
+                    margin: 0;
+                }
+                .contacts_emoji_anim_2 {
+                    right: 0;
+                    margin: 0;
+                }
+                img {
+                }
+                h3 {
+                }
+                p {
+                }
+                &__buttons {
+                    a {
+                        &:first-child {
+                        }
+                        &:last-child {
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    width: 469px;
+                    padding-left: 24px;
+                    img {
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                    }
+                }
+                &:nth-child(3) {
+                    width: 469px;
+                    padding-right: 24px;
+                    img {
+                    }
+                }
+            }
+            .slick-arrow {
+                cursor: pointer;
+                font-size: 0;
+                background-image: url(../../img/slider-arrow-2.svg);
+                border: none;
+                background-color: transparent;
+                width: 64px;
+                height: 64px;
+            }
+            .slick-next {
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                right: calc(50% - 70px);
+                transform: rotate(180deg);
+            }
+            .slick-prev {
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                left: calc(50% - 70px);
+            }
+        }
+    }
+}
+@media (max-width: 1360px) {
+    .feedback {
+        .emoji_anim {
+        }
+        .light_decor {
+            &-1 {
+            }
+            &-2 {
+            }
+        }
+        &__img-group {
+            svg {
+                position: absolute;
+                &:nth-child(1) {
+                }
+                &:nth-child(2) {
+                }
+                &:nth-child(3) {
+                }
+                &:nth-child(4) {
+                }
+            }
+        }
+        &__container {
+            .feedback__wrap {
+                background-position: center left 520px;
+                .form {
+                    h2 {
+                    }
+                    p {
+                    }
+                    .form__content {
+                        .input-wrap {
+                            input {
+                            }
+                        }
+                    }
+                    .form__buttons {
+                        button {
+                        }
+                        p {
+                            a {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

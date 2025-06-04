@@ -19,6 +19,9 @@
                 align-items: center;
                 justify-content: start;
                 background-size: cover !important;
+                img {
+                    display: none;
+                }
                 &__content {
                     padding: 197px 224px;
                     height: 100%;
@@ -1126,9 +1129,30 @@
         grid-template-columns: repeat(3, 1fr);
         gap: $margin-s;
         .card {
+            position: relative;
             height: 594px;
             display: flex;
             flex-direction: column;
+            .contacts_emoji_anim_1 {
+                position: absolute;
+                width: 66px;
+                transform: rotate(-20deg);
+                left: -50px;
+                top: 35%;
+                animation: contactsPulse 2s infinite linear;
+                animation-play-state: paused;
+                margin: 0 !important;
+            }
+            .contacts_emoji_anim_2 {
+                position: absolute;
+                width: 88px;
+                transform: rotate(15deg);
+                right: -45px;
+                bottom: 33%;
+                animation: contactsRotate 4s infinite linear;
+                animation-play-state: paused;
+                margin: 0 !important;
+            }
             img {
                 margin-bottom: $margin-xs;
                 position: static;
@@ -1186,25 +1210,6 @@
                     border-radius: 42px 42px 120px 42px;
                 }
             }
-        }
-        img {
-            position: absolute;
-        }
-        .contacts_emoji_anim_1 {
-            width: 66px;
-            transform: rotate(-20deg);
-            left: -50px;
-            top: 35%;
-            animation: contactsPulse 2s infinite linear;
-            animation-play-state: paused;
-        }
-        .contacts_emoji_anim_2 {
-            width: 88px;
-            transform: rotate(15deg);
-            right: -45px;
-            bottom: 33%;
-            animation: contactsRotate 4s infinite linear;
-            animation-play-state: paused;
         }
     }
 }

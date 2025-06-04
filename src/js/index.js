@@ -46,6 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
         // autoplay: true,
         // autoplaySpeed: 5000,
     });
+    function toggleContactsSlider() {
+        const $contacts = $('.contacts__container');
+        if (window.matchMedia('(max-width: 1440px)').matches) {
+            if (!$contacts.hasClass('slick-initialized')) {
+                $contacts.slick({
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    infinite: false,
+                });
+            }
+        } else {
+            if ($contacts.hasClass('slick-initialized')) {
+                $contacts.slick('unslick');
+            }
+        }
+    }
+
+    // Инициализация при загрузке
+    toggleContactsSlider();
+
+    // Слушаем изменение ширины окна
+    window.addEventListener('resize', toggleContactsSlider);
     // const arrGallery = [0, 120, 240, 360, 240, 120];
     // console.log(document.querySelector('.gallery__slider').querySelectorAll('.slide').length);
     // for (

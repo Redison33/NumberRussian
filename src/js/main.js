@@ -146,6 +146,10 @@
 // });
 document.addEventListener('DOMContentLoaded', () => {
     if (window.screen.width > 680) window.addEventListener('scroll', handleScroll);
+    // let paddingHeader;
+    // if (window.screen.width > 1360) {
+
+    // }
 
     function handleScroll() {
         const scrollTop = document.documentElement.scrollTop;
@@ -189,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // document.querySelector('header').style.marginBottom = '105px';
             document.querySelector('section').style.paddingTop = '120px';
             document.querySelector('.header').style.position = 'fixed';
-            document.querySelector('.header__container').style.padding = '12px 32px';
+            document.querySelector('.header__container').style.padding = '12px 0';
             document.querySelector('.header').style.zIndex = 10000;
             document.querySelector('.header').style.top = 0;
             document.querySelector('.header').style.left = 0;

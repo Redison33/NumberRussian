@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
-        <meta hero="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./src/libs/slick.css" />
         <link rel="stylesheet" href="./src/libs/fancybox.css" />
         <link rel="stylesheet" href="./src/style/general/style-general.css" />
@@ -13,6 +13,11 @@
     <body>
         <header class="header">
             <div class="header__container container">
+                <button class="header__button burger-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="header__logos">
                     <img src="./src/img/header__logo1.jpg" alt="" class="header__logo" />
                     <span></span>
@@ -164,6 +169,7 @@
                                     url('./src/img/important_slide_bg.png') lightgray no-repeat;
                             "
                         >
+                            <img src="./src/img/important_slide_bg.png" alt="" />
                             <div class="slide__content">
                                 <ul class="slide__labels">
                                     <li class="slide__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
@@ -186,6 +192,7 @@
                                     url('./src/img/important_slide_bg.png') lightgray no-repeat;
                             "
                         >
+                            <img src="./src/img/important_slide_bg.png" alt="" />
                             <div class="slide__content">
                                 <ul class="slide__labels">
                                     <li class="slide__labels__item" style="background-color: #f8ff91">Ученики школ 14-17 лет</li>
@@ -876,6 +883,7 @@
             <section class="contacts">
                 <div class="contacts__container container">
                     <div class="contacts__card card">
+                        <img src="./src/img/contacts_emoji_anim_1.png" class="contacts_emoji_anim_1 animationDetected" alt="" />
                         <img src="./src/img/contacts-1.jpg" alt="" />
                         <h3>Клименко Михаил Евгеньевич</h3>
                         <p>Заместитель генерального директора ООО "ЭлРос"</p>
@@ -944,6 +952,7 @@
                         </div>
                     </div>
                     <div class="contacts__card card">
+                        <img src="./src/img/contacts_emoji_anim_2.png" class="contacts_emoji_anim_2 animationDetected" alt="" />
                         <img src="./src/img/contacts-3.jpg" alt="" />
                         <h3>Калараш Денис</h3>
                         <p>Куратор движения «Цифровые волонтёры»</p>
@@ -977,8 +986,6 @@
                             </a>
                         </div>
                     </div>
-                    <img src="./src/img/contacts_emoji_anim_1.png" class="contacts_emoji_anim_1 animationDetected" alt="" />
-                    <img src="./src/img/contacts_emoji_anim_2.png" class="contacts_emoji_anim_2 animationDetected" alt="" />
                 </div>
             </section>
         </main>
