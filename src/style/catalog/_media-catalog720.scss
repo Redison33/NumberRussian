@@ -1,0 +1,130 @@
+@media (max-width: 1000px) {
+    @import '../_vars.scss';
+    @import '../_mixin.scss';
+
+    main {
+        .banner {
+            padding: 28px 0;
+            #banner-bg {
+            }
+            #banner-1-ellipse {
+                width: 350px;
+                height: 450px;
+                top: -76px;
+                right: -55px;
+            }
+            #banner-2-ellipse {
+                width: 280px;
+                height: 490px;
+                left: -70px;
+            }
+            #banner-3-ellipse {
+                width: 280px;
+                height: 470px;
+                top: 34px;
+            }
+            #banner-4-ellipse {
+                width: 150px;
+                height: 262px;
+            }
+            &__container {
+                padding: 0px $margin-xs;
+            }
+
+            &__labels {
+                li {
+                    font-size: 12px;
+                }
+            }
+
+            &__text {
+                margin-bottom: $margin-s;
+                &__title {
+                    font-size: 42px;
+                }
+
+                &__description {
+                    font-size: 16px;
+                }
+            }
+
+            &__button {
+            }
+        }
+
+        .catalog {
+            overflow: hidden;
+            svg {
+                display: none;
+            }
+
+            .svg-1 {
+            }
+
+            .svg-2 {
+            }
+
+            .svg-3 {
+            }
+
+            button {
+            }
+
+            &__container {
+                gap: $margin-xs;
+            }
+
+            &__inputs {
+                margin: 0;
+                &__switch {
+                    p {
+                    }
+
+                    .switch {
+                    }
+
+                    .switch input {
+                    }
+
+                    .slider {
+                    }
+
+                    .slider:before {
+                    }
+
+                    input:checked + .slider {
+                    }
+
+                    input:focus + .slider {
+                    }
+
+                    input:checked + .slider:before {
+                    }
+
+                    .slider.round {
+                    }
+
+                    .slider.round:before {
+                    }
+                }
+
+                &__search {
+                    button {
+                    }
+
+                    input {
+                    }
+                }
+            }
+
+            &__grid {
+                grid-template-columns: repeat(2, 1fr);
+                .card {
+                }
+
+                .catalog__grid__item {
+                }
+            }
+        }
+    }
+}
