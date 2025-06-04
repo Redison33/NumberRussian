@@ -216,4 +216,9 @@
             animation-play-state: paused;
         }
     }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 42px;
+        margin-bottom: 42px;
+    }
 }

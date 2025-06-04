@@ -16,3 +16,9 @@ $('.photos__slider').slick({
     arrows: true,
     variableWidth: true,
 });
+
+$('.events__list-slider').slick({
+    slidesToShow: 2,
+    centerMode: false,
+    arrows: true,
+});

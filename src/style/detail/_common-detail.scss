@@ -82,6 +82,10 @@ span {
         border: 1px solid #f0f6ff;
     }
 
+    img {
+        display: none;
+    }
+
     &__labels {
         display: flex;
         gap: $margin-xxs;
@@ -146,6 +150,10 @@ span {
             }
         }
     }
+}
+
+.aside {
+    display: none;
 }
 
 main {
@@ -1053,6 +1061,9 @@ main {
             .card {
                 @include card-item;
             }
+        }
+        &-slider {
+            display: none;
         }
     }
 }
