@@ -1041,6 +1041,10 @@ main {
         margin-bottom: $margin-xl;
         padding-bottom: 0;
 
+        #events-svg {
+            display: none;
+        }
+
         &__container {
             position: relative;
             z-index: 100;
