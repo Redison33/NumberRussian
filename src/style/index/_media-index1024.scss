@@ -1,0 +1,13 @@
+@media (max-width: 1900px) {
+    .important {
+        &__container {
+            .important__slider {
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+}

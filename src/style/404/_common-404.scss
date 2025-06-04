@@ -83,6 +83,7 @@ main {
             top: -105px;
             left: 15%;
             z-index: 99;
+            animation: notFoundVibrate 2s ease 0s infinite normal forwards;
             animation-play-state: paused;
         }
 
@@ -92,6 +93,7 @@ main {
             left: 35%;
             right: 0px;
             z-index: 101;
+            animation: notFoundEyes1 2s ease 0s infinite normal forwards;
             animation-play-state: paused;
         }
 
@@ -100,6 +102,7 @@ main {
             top: -50px;
             right: 35%;
             z-index: 101;
+            animation: notFoundShake 2s ease 0s infinite normal forwards;
             animation-play-state: paused;
         }
 
@@ -116,6 +119,7 @@ main {
             bottom: -80px;
             left: 15%;
             z-index: 99;
+            animation: notFoundShake 3.5s ease 0s infinite normal forwards;
             animation-play-state: paused;
         }
 
@@ -127,6 +131,7 @@ main {
             width: 92.614px;
             height: 92.614px;
             transform: rotate(3.972deg);
+            animation: notFoundVibrate 1.5s ease 0s infinite normal forwards;
             animation-play-state: paused;
         }
 
@@ -136,6 +141,7 @@ main {
             right: 17%;
             z-index: 99;
             transform: rotateY(-26.54deg);
+            animation: notFoundEyes1 3s ease 0s infinite normal forwards;
             animation-play-state: paused;
         }
 
