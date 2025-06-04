@@ -1065,9 +1065,10 @@ main {
             .card {
                 @include card-item;
             }
-        }
-        &-slider {
-            display: none;
+
+            &-slider {
+                display: none;
+            }
         }
     }
 }
