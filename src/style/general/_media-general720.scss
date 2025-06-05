@@ -6,6 +6,11 @@
     .container {
         margin: 0 24px;
     }
+    .header {
+        &__container {
+            padding: 12px 0;
+        }
+    }
     .footer {
         &__container {
             .footer__wrap {
