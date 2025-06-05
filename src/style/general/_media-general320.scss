@@ -97,10 +97,11 @@
     .breadcrumbs {
         margin-bottom: $margin-s;
         display: flex;
-        gap: 8px;
-        justify-content: start;
+        gap: 8px !important;
+        justify-content: start !important;
         font-size: 12px;
         flex-wrap: wrap;
+        margin-bottom: 16px;
         a {
             padding: 0;
         }

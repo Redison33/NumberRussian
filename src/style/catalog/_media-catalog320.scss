@@ -1,0 +1,39 @@
+@media (max-width: 650px) {
+    @import '../_vars.scss';
+    @import '../_mixin.scss';
+
+    main {
+        .banner {
+            display: none;
+        }
+
+        .catalog {
+            &__container {
+                gap: $margin-xs;
+            }
+
+            &__inputs {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: start;
+                align-items: start;
+                gap: 22px;
+                margin: 0;
+                margin-bottom: $margin-l;
+
+                &__search {
+                    width: 100%;
+
+                    svg {
+                        display: block;
+                    }
+                }
+            }
+
+            &__grid {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
