@@ -1,0 +1,412 @@
+@media (max-width: 640px) {
+    .important {
+        &__container {
+            padding-top: 16px;
+            .important__slider {
+                padding-bottom: 56px;
+                .slide {
+                    height: 536px;
+                    padding: 0;
+                    &__content {
+                        padding: 0 16px 16px 16px;
+                        .slide__labels {
+                            li {
+                            }
+                        }
+                    }
+                    h3 {
+                        font-size: 24px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                    a {
+                    }
+                }
+                .slick-arrow {
+                }
+                .slick-prev {
+                }
+                .slick-next {
+                }
+                .slick-dots {
+                    display: none !important;
+                    li {
+                        button {
+                        }
+                        .progress-bar {
+                        }
+                    }
+                    .slick-active {
+                        .progress-bar {
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .events {
+        &__container {
+            h2 {
+            }
+            .events__grid {
+                .card {
+                }
+            }
+            .events__button {
+            }
+        }
+        .snake_bg {
+        }
+    }
+
+    .party {
+        &__container {
+            h2 {
+            }
+            .party__slider {
+                .slide {
+                    img {
+                    }
+                    h3 {
+                    }
+                    &__prize {
+                        h4 {
+                        }
+                        p {
+                            span {
+                            }
+                        }
+                        img {
+                        }
+                    }
+                    &__buttons {
+                        a {
+                            &:first-child {
+                            }
+                            &:last-child {
+                            }
+                        }
+                    }
+                }
+                .slick-arrow {
+                }
+                .slick-prev {
+                }
+                .slick-next {
+                }
+            }
+        }
+    }
+
+    .hero {
+        &__container {
+            .hero__img_wrap {
+                .hero_emoji_anim_1 {
+                }
+                .hero_emoji_anim_2 {
+                }
+                .hero__img {
+                    img {
+                    }
+                }
+            }
+            .hero__wrap {
+                .hero__header {
+                    h2 {
+                    }
+                    p {
+                    }
+                }
+                .hero__content {
+                    h3 {
+                        span {
+                        }
+                    }
+                    p {
+                    }
+                }
+                .hero__info {
+                    a {
+                        .hero__icon {
+                            svg {
+                                path {
+                                }
+                            }
+                        }
+                        p {
+                            span {
+                            }
+                        }
+                        &:hover {
+                            .hero__icon {
+                                svg {
+                                    path {
+                                    }
+                                }
+                            }
+                            p {
+                            }
+                        }
+                    }
+                    .hero__date {
+                        .hero__icon {
+                        }
+                        p {
+                            span {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .snake_bg {
+        }
+    }
+    .direction {
+        &__container {
+            h2 {
+            }
+            .direction__content {
+                .card {
+                    .img-backgorund {
+                        img {
+                        }
+                    }
+                    p {
+                    }
+                    &:nth-child(1) {
+                        img {
+                        }
+                    }
+                    &:nth-child(2) {
+                        img {
+                        }
+                    }
+                    &:nth-child(3) {
+                        img {
+                        }
+                    }
+                    &:nth-child(4) {
+                        img {
+                        }
+                    }
+                    &:nth-child(5) {
+                        img {
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .volunteers {
+        &__container {
+            h2 {
+            }
+            p {
+            }
+            .volunteers__content {
+                img {
+                }
+                .card {
+                    &__content {
+                    }
+                    h3 {
+                    }
+                    p {
+                    }
+                    .card__imgs {
+                    }
+                    .snake_bg {
+                    }
+                    &:nth-child(1) {
+                        .snake_bg {
+                        }
+                    }
+                    &:nth-child(2) {
+                        .snake_bg {
+                        }
+                    }
+                    &:nth-child(3) {
+                        .snake_bg {
+                        }
+                    }
+                    &:nth-child(4) {
+                        .snake_bg {
+                        }
+                    }
+                    &:nth-child(5) {
+                        h3 {
+                        }
+                        p {
+                        }
+                        .card__imgs {
+                            img {
+                                &:nth-child(1) {
+                                }
+                                &:nth-child(2) {
+                                }
+                                &:nth-child(3) {
+                                }
+                                &:nth-child(4) {
+                                }
+                                &:nth-child(5) {
+                                }
+                                &:nth-child(6) {
+                                }
+                                &:nth-child(7) {
+                                }
+                                &:nth-child(8) {
+                                }
+                                &:nth-child(9) {
+                                }
+                                &:nth-child(10) {
+                                }
+                                &:nth-child(11) {
+                                }
+                                &:nth-child(12) {
+                                }
+                                &:nth-child(13) {
+                                }
+                                &:nth-child(14) {
+                                }
+                            }
+                        }
+                        .snake_bg {
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .feedback {
+        .emoji_anim {
+        }
+        .light_decor {
+            &-1 {
+            }
+            &-2 {
+            }
+        }
+        &__img-group {
+            svg {
+                &:nth-child(1) {
+                }
+                &:nth-child(2) {
+                }
+                &:nth-child(3) {
+                }
+                &:nth-child(4) {
+                }
+            }
+        }
+        &__container {
+            .feedback__wrap {
+                .form {
+                    h2 {
+                    }
+                    p {
+                    }
+                    .form__content {
+                        .input-wrap {
+                            input {
+                            }
+                        }
+                    }
+                    .form__buttons {
+                        button {
+                        }
+                        p {
+                            a {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gallery {
+        &__container {
+            .gallery-blur {
+            }
+            h2 {
+            }
+            .gallery__slider {
+                .slide {
+                    img {
+                    }
+                }
+            }
+        }
+    }
+    .news {
+        &__container {
+            h2 {
+            }
+            .news__content {
+                .card {
+                    img {
+                    }
+                    &__content {
+                        h3 {
+                        }
+                        p {
+                        }
+                        .card__info {
+                            a {
+                            }
+                            span {
+                            }
+                        }
+                    }
+                }
+            }
+            a {
+            }
+        }
+        .snake_bg {
+            &-1 {
+            }
+            &-2 {
+            }
+        }
+    }
+    .contacts {
+        &__container {
+            .card {
+                img {
+                }
+                h3 {
+                }
+                p {
+                }
+                &__buttons {
+                    a {
+                        &:first-child {
+                        }
+                        &:last-child {
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    img {
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                    }
+                }
+                &:nth-child(3) {
+                    img {
+                    }
+                }
+            }
+            img {
+            }
+            .contacts_emoji_anim_1 {
+            }
+            .contacts_emoji_anim_2 {
+            }
+        }
+    }
+}
