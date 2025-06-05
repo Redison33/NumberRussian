@@ -151,6 +151,7 @@
         }
     }
     .footer {
+        border-radius: $border-radius-m $border-radius-m 0 0;
         &__container {
             .footer__wrap {
                 &-left {

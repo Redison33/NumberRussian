@@ -1,5 +1,6 @@
 @media (max-width: 640px) {
     .important {
+        margin-bottom: 42px;
         &__container {
             padding-top: 16px;
             .important__slider {
@@ -7,6 +8,9 @@
                 .slide {
                     height: 536px;
                     padding: 0;
+                    img {
+                        max-height: 280px;
+                    }
                     &__content {
                         padding: 0 16px 16px 16px;
                         .slide__labels {
@@ -52,14 +56,42 @@
         }
     }
     .events {
+        margin-bottom: 42px;
         &__container {
             h2 {
             }
             .events__grid {
+                display: block;
+                width: 100%;
+                position: relative;
+                padding-bottom: 65px;
                 .card {
+                    width: 288px;
+                    margin: 0 6px;
+                }
+                .slick-arrow {
+                    position: absolute;
+                    font-size: 0;
+                    bottom: 0;
+                    border: none;
+                    background-color: transparent;
+                    background-image: url('../../img/slider-arrow-3.svg');
+                    background-repeat: no-repeat;
+                    width: 32px;
+                    height: 32px;
+                    padding: 0;
+                    cursor: pointer;
+                }
+                .slick-prev {
+                    left: calc(50% - 40px);
+                }
+                .slick-next {
+                    right: calc(50% - 40px);
+                    transform: rotate(180deg);
                 }
             }
             .events__button {
+                display: none;
             }
         }
         .snake_bg {
@@ -67,28 +99,53 @@
     }
 
     .party {
+        margin-bottom: 42px;
         &__container {
+            margin: 0;
+            padding: 16px;
+            border-radius: $border-radius-m;
             h2 {
+                margin-bottom: 16px;
             }
             .party__slider {
+                padding-bottom: 56px;
                 .slide {
+                    width: 288px;
+                    height: 522px;
+                    padding: $margin-xs;
+                    border-radius: $border-radius-m;
                     img {
+                        height: 214px;
                     }
                     h3 {
+                        border-radius: 16px;
+                        font-size: 24px;
                     }
                     &__prize {
+                        padding: 10px 12px;
+                        margin: 24px 0 12px 0;
                         h4 {
+                            font-size: 31px;
                         }
                         p {
+                            font-size: 14px;
                             span {
+                                font-size: 14px;
                             }
                         }
                         img {
+                            width: 80px;
+                            height: 60px;
+                            bottom: 40px;
                         }
                     }
                     &__buttons {
+                        flex-direction: column-reverse;
+                        gap: $margin-xxs;
                         a {
                             &:first-child {
+                                padding: 6px 12px;
+                                height: unset;
                             }
                             &:last-child {
                             }
@@ -96,52 +153,88 @@
                     }
                 }
                 .slick-arrow {
+                    background-image: url('../../img/slider-arrow-4.png');
+                    width: 32px;
+                    height: 32px;
                 }
                 .slick-prev {
+                    left: calc(50% - 40px);
                 }
                 .slick-next {
+                    right: calc(50% - 40px);
                 }
             }
         }
     }
 
     .hero {
+        margin-bottom: 42px;
         &__container {
             .hero__img_wrap {
                 .hero_emoji_anim_1 {
+                    width: 55px;
+                    height: 55px;
+                    top: unset;
+                    right: unset;
+                    left: -17px;
+                    bottom: -22px;
                 }
                 .hero_emoji_anim_2 {
+                    width: 47px;
+                    height: 47px;
                 }
                 .hero__img {
+                    border-radius: 12px 42px;
                     img {
+                        min-width: 255px;
+                        height: 370px;
+                        border-radius: 12px 42px;
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(20, 43, 253, 0.2) 100%), #fff;
+
+                        box-shadow: 317px 317px 125px 0px rgba(20, 43, 253, 0), 203px 203px 115px 0px rgba(20, 43, 253, 0.01),
+                            114px 114px 97px 0px rgba(20, 43, 253, 0.05), 51px 51px 72px 0px rgba(20, 43, 253, 0.09),
+                            13px 13px 39px 0px rgba(20, 43, 253, 0.1);
                     }
                 }
             }
             .hero__wrap {
+                gap: 24px;
                 .hero__header {
                     h2 {
+                        font-size: 24px;
                     }
                     p {
+                        font-size: 14px;
                     }
                 }
                 .hero__content {
                     h3 {
+                        font-size: 18px;
                         span {
                         }
                     }
                     p {
+                        font-size: 14px;
+                        margin-bottom: 24px;
                     }
                 }
                 .hero__info {
+                    flex-direction: column;
+                    gap: $margin-xxs;
                     a {
                         .hero__icon {
+                            padding: 8px;
+                            width: 40px;
+                            height: 40px;
                             svg {
                                 path {
                                 }
                             }
                         }
                         p {
+                            font-size: 14px;
                             span {
+                                font-size: 10px;
                             }
                         }
                         &:hover {
@@ -157,9 +250,14 @@
                     }
                     .hero__date {
                         .hero__icon {
+                            padding: 8px;
+                            width: 40px;
+                            height: 40px;
                         }
                         p {
+                            font-size: 14px;
                             span {
+                                font-size: 10px;
                             }
                         }
                     }
@@ -167,19 +265,27 @@
             }
         }
         .snake_bg {
+            display: none;
         }
     }
     .direction {
+        margin-bottom: 42px;
         &__container {
             h2 {
             }
             .direction__content {
                 .card {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: $margin-xs;
+                    border-radius: $border-radius-m;
+                    padding: $margin-xs;
                     .img-backgorund {
                         img {
                         }
                     }
                     p {
+                        font-size: 14px;
                     }
                     &:nth-child(1) {
                         img {
@@ -206,20 +312,29 @@
         }
     }
     .volunteers {
+        margin-bottom: 42px;
         &__container {
             h2 {
+                gap: 8px;
             }
             p {
+                font-size: 14px;
             }
             .volunteers__content {
+                grid-template-rows: unset;
                 img {
+                    display: none;
                 }
                 .card {
+                    padding: $margin-xs !important;
+                    border-radius: $border-radius-m !important;
                     &__content {
                     }
                     h3 {
+                        font-size: 18px;
                     }
                     p {
+                        font-size: 14px;
                     }
                     .card__imgs {
                     }
@@ -227,18 +342,22 @@
                     }
                     &:nth-child(1) {
                         .snake_bg {
+                            display: block;
                         }
                     }
                     &:nth-child(2) {
                         .snake_bg {
+                            display: block;
                         }
                     }
                     &:nth-child(3) {
                         .snake_bg {
+                            display: block;
                         }
                     }
                     &:nth-child(4) {
                         .snake_bg {
+                            display: block;
                         }
                     }
                     &:nth-child(5) {
@@ -279,6 +398,7 @@
                             }
                         }
                         .snake_bg {
+                            display: block;
                         }
                     }
                 }
@@ -286,15 +406,23 @@
         }
     }
     .feedback {
+        margin-bottom: 42px;
+        padding: 0;
+        background-image: unset;
+        border-radius: 12px;
+        border: 1px solid #a2abff;
         .emoji_anim {
+            display: none;
         }
         .light_decor {
+            display: none;
             &-1 {
             }
             &-2 {
             }
         }
         &__img-group {
+            display: none;
             svg {
                 &:nth-child(1) {
                 }
@@ -308,22 +436,33 @@
         }
         &__container {
             .feedback__wrap {
+                border: none;
+                background-color: transparent;
+                padding: 16px 0;
                 .form {
                     h2 {
+                        font-size: 24px;
                     }
                     p {
+                        font-size: 14px;
                     }
                     .form__content {
+                        display: flex;
+                        flex-direction: column;
                         .input-wrap {
                             input {
                             }
                         }
                     }
                     .form__buttons {
+                        display: flex;
+                        flex-direction: column;
                         button {
+                            @include button-outlined-v2;
                         }
                         p {
                             a {
+                                color: $primary-light;
                             }
                         }
                     }
@@ -332,36 +471,59 @@
         }
     }
     .gallery {
+        margin-bottom: 42px;
         &__container {
+            margin: 0;
             .gallery-blur {
             }
             h2 {
             }
             .gallery__slider {
+                height: unset;
+                gap: 8px;
                 .slide {
+                    min-width: 140px;
+                    max-width: 140px;
+                    gap: 8px;
                     img {
+                        min-height: 210px;
+                        border-radius: 12px;
                     }
                 }
             }
         }
     }
     .news {
+        margin-bottom: 42px;
         &__container {
             h2 {
             }
             .news__content {
                 .card {
+                    border-radius: $border-radius-m;
+                    flex-direction: column;
                     img {
+                        width: 100%;
+                        height: 293px;
                     }
                     &__content {
+                        padding: $margin-xs;
                         h3 {
+                            font-size: 18px;
                         }
                         p {
+                            font-size: 14px;
+                            margin-bottom: 18px;
                         }
                         .card__info {
+                            flex-direction: column;
+                            gap: 8px;
                             a {
                             }
                             span {
+                                padding: 0;
+                                background-color: transparent;
+                                font-size: 10px;
                             }
                         }
                     }
@@ -378,40 +540,74 @@
         }
     }
     .contacts {
+        margin-bottom: 64px;
         &__container {
+            margin: 0 16px;
+            padding-bottom: 64px;
             .card {
+                margin: 0 8px;
                 img {
+                    border-radius: $border-radius-m !important;
+                    height: 381px;
                 }
                 h3 {
+                    font-size: 24px;
+                    margin-bottom: 8px;
                 }
                 p {
+                    font-size: 14px;
                 }
                 &__buttons {
+                    flex-direction: column;
                     a {
+                        width: 100%;
                         &:first-child {
+                            border-radius: $border-radius-m $border-radius-m 0 0;
+                            padding: 10px;
+                            height: unset;
                         }
                         &:last-child {
+                            border-radius: 0 0 $border-radius-m $border-radius-m;
+                            padding: 10px;
+                            height: unset;
                         }
                     }
                 }
                 &:nth-child(1) {
+                    padding-left: 0;
+                    width: 288px;
                     img {
                     }
                 }
                 &:nth-child(2) {
+                    width: 288px;
                     img {
                     }
                 }
                 &:nth-child(3) {
+                    padding-right: 0;
+                    width: 288px;
                     img {
                     }
                 }
             }
-            img {
-            }
             .contacts_emoji_anim_1 {
+                height: unset !important;
             }
             .contacts_emoji_anim_2 {
+                height: unset !important;
+            }
+            .slick-arrow {
+                background-image: url('../../img/slider-arrow-3.svg');
+                background-repeat: no-repeat;
+                width: 32px;
+                height: 32px;
+            }
+            .slick-prev {
+                left: calc(50% - 40px);
+            }
+            .slick-next {
+                right: calc(50% - 40px);
             }
         }
     }

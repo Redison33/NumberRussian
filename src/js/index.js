@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // autoplay: true,
         // autoplaySpeed: 5000,
     });
+    if (window.matchMedia('(max-width: 640px)').matches) {
+        $('.events__grid').slick({
+            slidesToShow: 1,
+            variableWidth: true,
+            infinite: false,
+            dots: false,
+            autoplay: false,
+        });
+    }
     function toggleContactsSlider() {
         const $contacts = $('.contacts__container');
         if (window.matchMedia('(max-width: 1440px)').matches) {
@@ -85,7 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //     // autoplay: true,
     //     // autoplaySpeed: 5000,
     // });
-    const paddingPattern = [0, 120, 240, 360, 240, 120];
+    let paddingPattern;
+    if (window.matchMedia('(max-width: 640px)').matches) {
+        paddingPattern = [0, 60, 120, 180, 120, 60];
+    } else {
+        paddingPattern = [0, 120, 240, 360, 240, 120];
+    }
     const generatePaddings = (count) => {
         const paddings = [];
         for (let i = 0; i < count; i++) {
