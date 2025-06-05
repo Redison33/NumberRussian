@@ -377,6 +377,7 @@
         .events {
             position: relative;
             z-index: 100;
+            overflow: hidden;
 
             #events-svg {
                 display: block;
