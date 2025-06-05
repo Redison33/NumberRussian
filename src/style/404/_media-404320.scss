@@ -1,0 +1,74 @@
+@media (max-width: 640px) {
+    main {
+        height: 90vh;
+        overflow: hidden;
+        .content {
+            margin-top: 60px;
+            #zmeya-1 {
+                width: 362.944px;
+                height: 350.66px;
+            }
+
+            #zmeya-2 {
+                width: 353.436px;
+                height: 341.004px;
+            }
+
+            #smile-1 {
+                width: 55.324px;
+                height: 55.324px;
+                top: -40px;
+            }
+
+            #smile-2 {
+            }
+
+            #smile-3 {
+                display: none;
+                animation: unset;
+            }
+
+            #smile-4 {
+                width: 44.911px;
+                height: 44.911px;
+                top: 270px;
+                bottom: unset;
+            }
+
+            #smile-5 {
+                width: 65.968px;
+                height: 65.968px;
+                left: 50%;
+            }
+
+            #smile-6 {
+                width: 92.614px;
+                height: 92.614px;
+                right: 30px;
+            }
+
+            #smile-7 {
+                width: 37.812px;
+                height: 37.812px;
+                right: 30px;
+                top: -25px;
+            }
+
+            &__container {
+                padding: 42px;
+                margin: 0;
+            }
+
+            &__title {
+                font-size: 32px;
+            }
+
+            &__description {
+                font-size: 14px;
+            }
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
