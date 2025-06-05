@@ -15,8 +15,9 @@
         }
 
         &__labels {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
 
             &__item {
                 font-size: 10px;
