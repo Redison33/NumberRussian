@@ -24,10 +24,16 @@
                     }
                 }
                 .slick-arrow {
+                    background-image: url('../../img/slider-arrow-3.svg');
+                    background-repeat: no-repeat;
+                    width: 32px;
+                    height: 32px;
                 }
                 .slick-prev {
+                    left: calc(50% - 40px);
                 }
                 .slick-next {
+                    right: calc(50% - 40px);
                 }
                 .slick-dots {
                     display: none !important;
