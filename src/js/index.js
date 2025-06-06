@@ -108,59 +108,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     generatePaddings(document.querySelector('.gallery__slider').querySelectorAll('.slide').length);
-    const slider = document.querySelector('.gallery__slider');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let isDragging = false;
+    // const slider = document.querySelector('.gallery__slider');
+    // let isDown = false;
+    // let startX;
+    // let scrollLeft;
+    // let isDragging = false;
 
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-        isDragging = false;
-        for (const img of slider.querySelectorAll('img')) {
-            img.style.cursor = 'grab';
-        }
-    });
+    // slider.addEventListener('mousedown', (e) => {
+    //     isDown = true;
+    //     startX = e.pageX - slider.offsetLeft;
+    //     scrollLeft = slider.scrollLeft;
+    //     isDragging = false;
+    //     for (const img of slider.querySelectorAll('img')) {
+    //         img.style.cursor = 'grab';
+    //     }
+    // });
 
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        for (const img of slider.querySelectorAll('img')) {
-            img.removeAttribute('style');
-        }
-    });
+    // slider.addEventListener('mouseleave', () => {
+    //     isDown = false;
+    //     for (const img of slider.querySelectorAll('img')) {
+    //         img.removeAttribute('style');
+    //     }
+    // });
 
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        for (const img of slider.querySelectorAll('img')) {
-            img.removeAttribute('style');
-        }
-    });
+    // slider.addEventListener('mouseup', () => {
+    //     isDown = false;
+    //     for (const img of slider.querySelectorAll('img')) {
+    //         img.removeAttribute('style');
+    //     }
+    // });
 
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        const x = e.pageX - slider.offsetLeft;
-        const walk = x - startX;
-        if (Math.abs(walk) > 5) {
-            isDragging = true;
-        }
-        slider.scrollLeft = scrollLeft - walk;
-    });
+    // slider.addEventListener('mousemove', (e) => {
+    //     if (!isDown) return;
+    //     const x = e.pageX - slider.offsetLeft;
+    //     const walk = x - startX;
+    //     if (Math.abs(walk) > 5) {
+    //         isDragging = true;
+    //     }
+    //     slider.scrollLeft = scrollLeft - walk;
+    // });
 
-    slider.addEventListener('click', (e) => {
-        if (isDragging) {
-            e.preventDefault();
-            e.stopPropagation();
-            isDragging = false; // сбрасываем
-        }
-    });
+    // slider.addEventListener('click', (e) => {
+    //     if (isDragging) {
+    //         e.preventDefault();
+    //         e.stopPropagation();
+    //         isDragging = false; // сбрасываем
+    //     }
+    // });
 
-    slider.querySelectorAll('img').forEach((img) => {
-        img.addEventListener('dragstart', (e) => {
-            e.preventDefault();
-        });
-    });
+    // slider.querySelectorAll('img').forEach((img) => {
+    //     img.addEventListener('dragstart', (e) => {
+    //         e.preventDefault();
+    //     });
+    // });
     Fancybox.bind('[data-fancybox]', {
         // hideScrollbar: false,
     });

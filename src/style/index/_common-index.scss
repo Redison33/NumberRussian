@@ -170,7 +170,7 @@
 .party {
     margin-bottom: 160px;
     &__container {
-        padding: 42px 60px;
+        padding: 42px 0px;
         border-radius: 64px;
         background: #f1f5ff;
         h2 {
@@ -179,8 +179,19 @@
         .party__slider {
             position: relative;
             padding-bottom: 108px;
+
+            .slick-list {
+                padding: 0 60px;
+            }
+
             .slide {
-                margin: 0 6px;
+                transition: box-shadow 0.3s ease-in-out;
+                &:hover {
+                    box-shadow: -1px -1px 17px 0px rgba(0, 19, 194, 0.3);
+                    -webkit-box-shadow: -1px -1px 17px 0px rgba(0, 19, 194, 0.3);
+                    -moz-box-shadow: -1px -1px 17px 0px rgba(0, 19, 194, 0.3);
+                }
+                margin: 20px 10px;
                 width: 450px;
                 height: 692px;
                 display: flex;
@@ -264,14 +275,21 @@
                 background-color: transparent;
                 width: 64px;
                 height: 64px;
+                transition: background-image 0.3s ease-in-out;
+
+                &:hover {
+                    background-image: url('../../img/slider-arrow-2.svg');
+                }
             }
             .slick-prev {
+                cursor: pointer;
                 position: absolute;
                 z-index: 1;
                 bottom: 0;
                 left: calc(50% - 74px);
             }
             .slick-next {
+                cursor: pointer;
                 position: absolute;
                 z-index: 1;
                 bottom: 0;
@@ -835,7 +853,7 @@
         z-index: 10;
         top: 60px;
         left: 10%;
-        animation: feedbackLike 30s infinite linear;
+        animation: shakeTopBigBanner 3s infinite linear;
         animation-play-state: paused;
     }
     .light_decor {
@@ -999,17 +1017,18 @@
         }
         h2 {
             @include header-section;
-            margin: 0;
         }
         .gallery__slider {
             display: flex;
             gap: $margin-xs;
-            overflow-x: auto;
+            overflow-x: hidden;
             white-space: nowrap;
-            cursor: grab;
+            // cursor: grab;
             user-select: none;
             height: 1176px;
+            margin-left: -1600px;
             overflow-y: hidden;
+            justify-content: center;
             .slide {
                 // margin: 0 6px;
                 display: flex;
@@ -1024,6 +1043,13 @@
                     border-radius: $border-radius-xl;
                 }
             }
+        }
+
+        svg {
+            position: absolute;
+            z-index: 110;
+            right: calc(50% - 32px);
+            bottom: 50px;
         }
     }
 }
@@ -1048,6 +1074,14 @@
                 background-color: #f1f5ff;
                 display: flex;
                 overflow: hidden;
+
+                transition: box-shadow 0.3s ease-in-out;
+                &:hover {
+                    box-shadow: -1px -1px 17px 0px rgba(0, 19, 194, 0.3);
+                    -webkit-box-shadow: -1px -1px 17px 0px rgba(0, 19, 194, 0.3);
+                    -moz-box-shadow: -1px -1px 17px 0px rgba(0, 19, 194, 0.3);
+                }
+
                 img {
                     width: 293px;
                     object-fit: cover;
@@ -1133,6 +1167,7 @@
             height: 594px;
             display: flex;
             flex-direction: column;
+            padding-top: 10px;
             .contacts_emoji_anim_1 {
                 position: absolute;
                 width: 66px;
@@ -1152,6 +1187,21 @@
                 animation: contactsRotate 4s infinite linear;
                 animation-play-state: paused;
                 margin: 0 !important;
+                border-radius: unset !important;
+            }
+            .contacts_emoji_anim_3 {
+                animation: contactsPulse 2s infinite linear;
+                animation-play-state: paused;
+            }
+            .computer {
+                position: absolute;
+                width: 76px;
+                height: 76px;
+                top: 20px !important;
+                right: 0 !important;
+                left: unset;
+                border-radius: unset !important;
+                z-index: 110;
             }
             img {
                 margin-bottom: $margin-xs;

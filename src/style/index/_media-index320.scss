@@ -3,13 +3,16 @@
         margin-bottom: 42px;
         &__container {
             padding-top: 16px;
+            border-radius: $border-radius-m;
             .important__slider {
                 padding-bottom: 56px;
                 .slide {
                     height: 536px;
                     padding: 0;
+                    border-radius: $border-radius-m;
                     img {
                         max-height: 280px;
+                        border-radius: $border-radius-m;
                     }
                     &__content {
                         padding: 0 16px 16px 16px;
@@ -25,6 +28,7 @@
                         font-size: 14px;
                     }
                     a {
+                        width: 100%;
                     }
                 }
                 .slick-arrow {
@@ -102,18 +106,24 @@
         margin-bottom: 42px;
         &__container {
             margin: 0;
-            padding: 16px;
+            padding: 16px 0;
             border-radius: $border-radius-m;
             h2 {
                 margin-bottom: 16px;
             }
+
             .party__slider {
                 padding-bottom: 56px;
+
+                .slick-list {
+                    padding: 0 12px;
+                }
                 .slide {
                     width: 288px;
                     height: 522px;
                     padding: $margin-xs;
                     border-radius: $border-radius-m;
+                    margin: 10px 4px;
                     img {
                         height: 214px;
                     }
@@ -459,6 +469,7 @@
                         flex-direction: column;
                         button {
                             @include button-outlined-v2;
+                            width: 100%;
                         }
                         p {
                             a {
@@ -481,6 +492,7 @@
             .gallery__slider {
                 height: unset;
                 gap: 8px;
+                margin-left: -740px;
                 .slide {
                     min-width: 140px;
                     max-width: 140px;
