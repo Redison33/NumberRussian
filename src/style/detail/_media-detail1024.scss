@@ -338,7 +338,11 @@
             }
 
             &__container {
-                padding: $margin-l 60px;
+                padding: $margin-l 0;
+            }
+
+            .slick-list {
+                padding: 0 32px;
             }
         }
 
@@ -353,7 +357,17 @@
             }
 
             &__container {
-                padding: $margin-l 60px;
+                padding: $margin-l 0;
+            }
+
+            .slick-list {
+                padding: 0 32px;
+            }
+
+            .slick-arrow {
+                &:hover {
+                    background-image: url('../../img/slider-arrow-4.svg');
+                }
             }
         }
 
@@ -367,6 +381,14 @@
 
             &__slider {
                 max-width: 100%;
+
+                .slick-arrow {
+                    &:hover {
+                        background-image: url('../../img/slider-arrow-3.svg');
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
 
                 img {
                     max-width: 744px;

@@ -6,6 +6,7 @@
         &__container {
             padding: 0;
             padding-bottom: 24px;
+            border-radius: 12px;
         }
 
         img {
@@ -44,6 +45,8 @@
             align-items: center;
             flex-direction: column-reverse;
             justify-content: center;
+            width: 100%;
+            padding: 0 16px;
 
             &__button {
                 display: none;
@@ -51,6 +54,7 @@
 
             &__button-2 {
                 display: flex;
+                width: 100%;
             }
 
             &__description {
@@ -73,6 +77,7 @@
         margin: 0 16px $margin-m 16px;
 
         &__card {
+            border-radius: $border-radius-m;
             &__title {
                 font-size: 16px;
             }
@@ -98,6 +103,7 @@
         }
 
         &__reglament {
+            border-radius: $border-radius-m;
             &__title {
                 font-size: 16px;
                 margin-bottom: $margin-xs;
@@ -129,6 +135,7 @@
         }
 
         &__socials {
+            border-radius: $border-radius-m;
             padding: 16px;
 
             li {
@@ -290,7 +297,7 @@
             margin-bottom: 32px;
 
             &__container {
-                padding: 16px;
+                padding: 16px 0px;
                 border-radius: $border-radius-m;
                 margin: 0;
             }
@@ -298,6 +305,10 @@
             &__title {
                 font-size: 24px;
                 margin-bottom: 12px;
+            }
+
+            .slick-list {
+                padding: 0 6px;
             }
 
             .party__slider {
@@ -361,7 +372,7 @@
             }
 
             &__container {
-                padding: 16px;
+                padding: 16px 0px;
                 border-radius: $border-radius-m;
                 margin: 0;
             }
@@ -369,6 +380,10 @@
             &__title {
                 font-size: 24px;
                 margin-bottom: 12px;
+            }
+
+            .slick-list {
+                padding: 0 6px;
             }
 
             .party__slider {
@@ -412,6 +427,12 @@
                     background-repeat: no-repeat;
                     width: 32px;
                     height: 32px;
+
+                    &:hover {
+                        background-image: url('../../img/slider-arrow-4.png');
+                        width: 32px;
+                        height: 32px;
+                    }
                 }
 
                 .slick-next {
@@ -440,6 +461,8 @@
                 img {
                     max-width: 320px;
                     height: 219px;
+                    border-radius: $border-radius-m;
+                    margin: 0 4px;
                 }
 
                 .slick-arrow {

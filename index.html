@@ -731,9 +731,35 @@
                                 </div>
                             </div>
                             <div class="form__buttons">
-                                <button>Оставить заявку</button>
+                                <button class="form__submit">Оставить заявку</button>
                                 <p>Нажимая “Отправить заявку” вы соглашаетесь с <a href="">Политикой конфиденциальности</a></p>
                             </div>
+                        </div>
+
+                        <div class="modal-thx">
+                            <div class="content">
+                                <h3 class="content__title">Спасибо!</h3>
+                                <strong>Ваша заявка успешно отправлена</strong>
+
+                                <p>В ближайшее время с вами свяжется наш менеджер для уточнения информации</p>
+
+                                <button class="button">Закрыть</button>
+                            </div>
+
+                            <img src="./src/img/thx-modal.png">
+                        </div>
+
+                         <div class="modal-error"> 
+                            <div class="content">
+                                <h3 class="content__title">Ошибка</h3>
+                                <strong>К сожалению заявка не была отправлена</strong>
+
+                                <p>Убедитесь что информация была введена корректна и попробуйте еще раз</p>
+
+                                <button class="button">Повторить</button>
+                            </div>
+
+                            <img src="./src/img/modal-error.png">
                         </div>
                         <!-- <img src="./src/img/feedback_form_bg.png" alt="" /> -->
                     </div>
@@ -1084,6 +1110,7 @@
                 </div>
             </div>
         </footer>
+        <div class="modal-overlay"></div>
         <script src="./src/libs/jquery-3.6.4.min.js"></script>
         <script src="./src/libs/jquery.mask.min.js"></script>
         <script src="./src/libs/jquery.validate.min.js"></script>

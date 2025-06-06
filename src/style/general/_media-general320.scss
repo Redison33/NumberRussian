@@ -95,15 +95,20 @@
         margin: 0 16px;
     }
     .breadcrumbs {
-        margin-bottom: $margin-s;
+        padding-bottom: 10px;
         display: flex;
         gap: 8px !important;
         justify-content: start !important;
         font-size: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 16px;
+        // flex-wrap: wrap;
+        margin-bottom: 10px !important;
+        overflow-x: scroll;
+        svg {
+            flex-shrink: 0;
+        }
         a {
             padding: 0;
+            white-space: nowrap;
         }
     }
     .header {
