@@ -280,7 +280,6 @@ main {
         }
 
         &__aside {
-            // position: relative;
             position: sticky;
             top: 75px;
             z-index: 100;
@@ -295,8 +294,6 @@ main {
                 padding: $margin-s;
                 background-color: #f0f6ff;
                 border-radius: $border-radius-l;
-
-                @include block-hover;
 
                 &__title {
                     font-size: 18px;
@@ -328,8 +325,6 @@ main {
                         font-size: 16px;
                         font-weight: 500;
                     }
-
-                    @include block-hover;
                 }
             }
 
@@ -393,8 +388,6 @@ main {
                 background-color: #f0f6ff;
                 border-radius: $border-radius-l;
 
-                @include block-hover;
-
                 &__title {
                     font-size: 18px;
                     font-weight: 500;
@@ -408,22 +401,6 @@ main {
                         align-items: center;
                         gap: $margin-xs;
 
-                        // a {
-                        //     @include button-reset;
-                        // }
-
-                        // div {
-                        //     p {
-                        //         font-size: 16px;
-                        //         font-weight: 500;
-                        //     }
-
-                        //     span {
-                        //         font-size: 14px;
-                        //         font-weight: 400;
-                        //         color: #727272;
-                        //     }
-                        // }
                         a {
                             display: flex;
                             gap: $margin-xs;
@@ -447,6 +424,7 @@ main {
                                     }
                                 }
                             }
+
                             p {
                                 display: flex;
                                 flex-direction: column;
@@ -463,6 +441,7 @@ main {
                                     transition: color 0.3s ease-in-out;
                                 }
                             }
+
                             &:hover {
                                 .master__aside__reglament__icon {
                                     background-color: $primary-blue;
@@ -496,8 +475,6 @@ main {
                 padding: $margin-s;
                 background-color: #f0f6ff;
                 border-radius: $border-radius-l;
-
-                @include block-hover;
             }
         }
         svg {
@@ -851,6 +828,7 @@ main {
                         }
                         &:last-child {
                             @include button-yellow;
+                            width: 100%;
                         }
                     }
                 }
@@ -1023,6 +1001,7 @@ main {
             z-index: 100;
 
             img {
+                width: 1376px;
                 margin: 0 20px;
                 height: 600px;
                 object-fit: cover;

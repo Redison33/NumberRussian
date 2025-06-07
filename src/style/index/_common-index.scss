@@ -605,6 +605,7 @@
                 padding: $margin-s;
                 display: flex;
                 gap: $margin-s;
+                align-items: center;
                 .img-backgorund {
                     min-width: 56px;
                     height: 56px;
@@ -701,7 +702,7 @@
         .volunteers__content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 234px);
+            grid-template-rows: repeat(3, minmax(234px, 1fr));
             gap: $margin-xs;
             position: relative;
             img {
@@ -719,6 +720,7 @@
                 flex-direction: column;
                 padding: 42px;
                 position: relative;
+                border-radius: 42px 120px 42px 42px;
                 &__content {
                     position: relative;
                     z-index: 100;
@@ -758,7 +760,7 @@
                     animation: unset;
                 }
                 &:nth-child(1) {
-                    border-radius: 42px 42px 120px 42px;
+                    // border-radius: 42px 42px 120px 42px;
                     border: 1px solid #97ffc6;
                     background: linear-gradient(263deg, #fff 0%, #97ffc6 100%);
                     box-shadow: -343px -229px 115px 0px rgba(162, 255, 204, 0), -219px -147px 106px 0px rgba(162, 255, 204, 0.01),
@@ -769,7 +771,7 @@
                     }
                 }
                 &:nth-child(2) {
-                    border-radius: 42px 120px 42px 42px;
+                    // border-radius: 42px 120px 42px 42px;
                     border: 1px solid #ffd7bd;
                     background: linear-gradient(277deg, #ffd7bd 0%, #fff 100%);
                     box-shadow: 453px -343px 159px 0px rgba(255, 218, 194, 0), 290px -219px 145px 0px rgba(255, 218, 194, 0.01),
@@ -782,7 +784,7 @@
                     }
                 }
                 &:nth-child(3) {
-                    border-radius: 120px 42px 42px 42px;
+                    // border-radius: 120px 42px 42px 42px;
                     border: 1px solid #dbd2ff;
                     background: linear-gradient(277deg, #fff 0%, #dbd2ff 100%);
                     box-shadow: -456px 0px 128px 0px rgba(221, 213, 255, 0), -292px 0px 117px 0px rgba(221, 213, 255, 0.01),
@@ -795,7 +797,7 @@
                     }
                 }
                 &:nth-child(4) {
-                    border-radius: 42px 42px 120px 42px;
+                    // border-radius: 42px 42px 120px 42px;
                     border: 1px solid #d4ff91;
                     background: linear-gradient(97deg, #fff 0%, #d4ff91 100.65%);
                     box-shadow: 453px 0px 127px 0px rgba(218, 255, 159, 0), 290px 0px 116px 0px rgba(218, 255, 159, 0.01),
@@ -808,7 +810,7 @@
                 }
                 &:nth-child(5) {
                     grid-area: 3 / 1 / 4 / 3;
-                    border-radius: 42px 120px 42px 42px;
+                    // border-radius: 42px 120px 42px 42px;
                     border: 1px solid #bcf3ff;
                     background: radial-gradient(201.51% 179.57% at 19.1% 45.73%, #fff 0%, #bcf3ff 100%);
                     box-shadow: 0px 684px 192px 0px rgba(119, 228, 253, 0), 0px 438px 175px 0px rgba(119, 228, 253, 0.01),

@@ -352,6 +352,10 @@
                     background-repeat: no-repeat;
                     width: 32px;
                     height: 32px;
+
+                    &:hover {
+                        background-image: url('../../img/slider-arrow-3.svg');
+                    }
                 }
 
                 .slick-next {
@@ -429,9 +433,7 @@
                     height: 32px;
 
                     &:hover {
-                        background-image: url('../../img/slider-arrow-4.png');
-                        width: 32px;
-                        height: 32px;
+                        background-image: url('../../img/slider-arrow-3.svg');
                     }
                 }
 
@@ -448,7 +450,6 @@
         .photos {
             border-radius: $border-radius-l;
             margin-bottom: $margin-l;
-            // height: 219px;
 
             svg {
                 display: none;
@@ -459,7 +460,7 @@
                 height: 219px;
 
                 img {
-                    max-width: 320px;
+                    width: 320px;
                     height: 219px;
                     border-radius: $border-radius-m;
                     margin: 0 4px;
@@ -470,6 +471,10 @@
                     background-repeat: no-repeat;
                     width: 32px;
                     height: 32px;
+
+                    &:hover {
+                        background-image: url('../../img/slider-arrow-3.svg');
+                    }
                 }
 
                 .slick-next {
